@@ -1,0 +1,33 @@
+\chapter{Einleitung}
+
+So funktionieren Formeln in Latex:
+\begin{center}
+	\begin{equation}
+		N = R^{*} \cdot f_{p} \cdot n_{e} \cdot f_{l} \cdot f_{i} \cdot f_{c} \cdot L 
+	\end{equation}
+\end{center}
+
+% Einrücken von Text wird mit \noindent unterdrückt
+\noindent So werden Bilder eingefügt:\\
+
+\begin{figure}[h] % Das [h] sorgt dafür, dass das Bild exakt an dieser Stelle im Text eingefügt wird. Andernfalls sucht LaTeX automatisch nach einer Stelle in der Nähe wo das Bild am besten reinpasst
+	\centering
+	\label{figure:kepler}
+	\includegraphics[width=0.2\textwidth]{kepler.jpg} % Breite = 0.2 x Seitenbreite
+	\caption[Kepler (Titel im Abk.-Verzeichnis)]{Titel unter dem Bild - Quelle: \cite{key}}
+	% als Quelle erscheint in der PDF ein [?], da der Eintrag "key" nicht in der literatur.bib Datei existiert
+\end{figure}
+
+\section{So wird eine neue Überschrift erstellt}
+So werden Abbildungen/Tabellen/Abschnitte referenziert: Abb. \ref{figure:kepler}\\
+
+\subsection{So wird eine neue Unterüberschrift erstellt}
+Das sind die Absatzarten:\\
+Einfacher Absatz\\\\
+Absatz mit Abstand\\
+
+Absatz mit Abstand, mit Einrücken\\\\
+
+\noindent Bestimmte Zeichen wie z.B. \& müssen mit vorangehendem Backslash versehen werden, da sie ansonsten als LaTeX Steuerungszeichen interpretiert werden. ,,Gänsefüßchen`` gehen so...
+
+

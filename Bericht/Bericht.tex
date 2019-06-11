@@ -111,9 +111,15 @@
 %
 %-------------------------------
 
-\title{\LARGE Laborbericht zum Flugversuch Do 128-6 \newline\newline }
-\subtitle{Institut für Flugführung}
-\author{\normalsize Marco De Geatano, Jens Karch, Philip Margenfeld, Kilian Schulz \& Wentao Wu}
+%\title{\LARGE Laborbericht zum Flugversuch Do 128-6 \newline\newline }
+%\subtitle{Institut für Flugführung}
+%\author{\normalsize Marco De Geatano, Jens Karch, Philip Margenfeld, Kilian Schulz \& Wentao Wu}
+
+\newcommand{\Art}{Laborbericht}											% Projekt, Bachelor, Studien, Master oder Diplom	
+\newcommand{\Titel}{Flugversuch Do 128-6}								% Titel der Arbeit
+\newcommand{\Studiengang}{Maschinenbau}									% Studiengang für "Kleingedrucktes"
+\newcommand{\Abschluss}{Bachelor}										% Bachelor- oder Masterstudent (oder Diplom)			
+\newcommand{\Pruefer}{Mark Bitter (mark.bitter@tu-braunschweig.de)}		% Prüfer/Betreuer
 
 %---------------------------------------------------------------
 
@@ -130,14 +136,14 @@
 
 %---------------------------------------------------------------------------------------------------
 
-
 \begin{document}
-  \maketitle[image] %[<plain/image/imagetext>,<logo=left/right>]
+  %\maketitle[image] %[<plain/image/imagetext>,<logo=left/right>]
+  \include{Seiten/titelseite}  
+  
   \tableofcontents
   \newpage
    \glossarystyle{altlong4col}%
     \setlength{\glsdescwidth}{0.7\textwidth}
-  \include{Seiten/symbolverzeichnis}
   \include{Seiten/abkverzeichnis} 
   
   \include{Seiten/einleitung}

@@ -35,13 +35,24 @@
 \usepackage{multirow}
 \usepackage{verbatim}	% für mehrzeilige Kommentare \beginn{comment}
 
+% Nomenklaturverzeichnis
+\usepackage{setspace}
+\usepackage{nomencl}
+\usepackage{nomentbl}
+\renewcommand{\nomname}{Nomenklaturverzeichnis}			% Änderung des Verzeichnistitels
+\renewcommand{\nomAname}{Lateinische Formelzeichen}
+\renewcommand{\nomGname}{Griechische Formelzeichen}
+\renewcommand{\nomXname}{Abkürzungen}
+\renewcommand{\nomZname}{Indizes}
+\makenomenclature
+
 \graphicspath{{./Bilder/}}
 
 %===============================================================
 %
 %	Hyperlinks im Dokument
 %
-%---------------------------------------
+%===============================================================
 
 \usepackage[
   pdftex,%
@@ -53,7 +64,7 @@
 %
 %	Glossary
 %
-%---------------------------------------
+%===============================================================
 
 \usepackage[nonumberlist,acronym,section]{glossaries}
 	%nonumberlist: no page numbering
@@ -68,8 +79,6 @@
 \makeglossaries
 
 \AtEndDocument{\glsaddall}	%füge alle Symbole dem Verzeichnis zu
-
-%-----------------------------------------------------------------
 
 
 %Makros für eine erleichterte Eingabe wiederkehrender Befehle:
@@ -94,7 +103,7 @@
 %
 % Farben
 %
-%-------------------------------
+%===============================================================
 
 \definecolor{ilr-blue}{RGB}{44,79,162}
 \definecolor{light-blue}{RGB}{220,220,255}
@@ -109,16 +118,14 @@
 %
 % Titelseiten-Elemente
 %
-%-------------------------------
+%===============================================================
 
 %\title{\LARGE Laborbericht zum Flugversuch Do 128-6 \newline\newline }
 %\subtitle{Institut für Flugführung}
 %\author{\normalsize Marco De Geatano, Jens Karch, Philip Margenfeld, Kilian Schulz \& Wentao Wu}
 
 \newcommand{\Art}{Laborbericht}											% Projekt, Bachelor, Studien, Master oder Diplom	
-\newcommand{\Titel}{Flugversuch Do 128-6}								% Titel der Arbeit
-\newcommand{\Studiengang}{Maschinenbau}									% Studiengang für "Kleingedrucktes"
-\newcommand{\Abschluss}{Bachelor}										% Bachelor- oder Masterstudent (oder Diplom)			
+\newcommand{\Titel}{Flugversuch Do 128-6}								% Titel der Arbeit		
 \newcommand{\Pruefer}{Mark Bitter (mark.bitter@tu-braunschweig.de)}		% Prüfer/Betreuer
 
 %---------------------------------------------------------------
@@ -130,6 +137,7 @@
 %
 % Hurenkinder/Schusterjungen vermeiden
 %
+%===============================================================
 \clubpenalty         = 10000
 \widowpenalty        = 10000
 \displaywidowpenalty = 10000
@@ -137,66 +145,52 @@
 %---------------------------------------------------------------------------------------------------
 
 \begin{document}
-  %\maketitle[image] %[<plain/image/imagetext>,<logo=left/right>]
-  \include{Seiten/titelseite}  
-  
-  \tableofcontents
-  \newpage
-   \glossarystyle{altlong4col}%
-    \setlength{\glsdescwidth}{0.7\textwidth}
-  \include{Seiten/abkverzeichnis} 
-  
-  \include{Seiten/einleitung}
-  \include{Seiten/theorie}
-  \include{Seiten/versuch}
-  \include{Seiten/ergebnisse}
-  \include{Seiten/fazit}
+	%\maketitle[image] %[<plain/image/imagetext>,<logo=left/right>] % TUBS Report Titelseite
+	
+	% === Titelseite === %
+	\include{Seiten/titelseite}  
+	\newpage
+	
+	% === Inhaltsverzeichnis === %
+  	\tableofcontents
+  	\newpage
+  	
+	% === Nomenklatur === %
+	\pagenumbering{roman}\setcounter{page}{1}
+  	\addcontentsline{toc}{chapter}{Nomenklaturverzeichnis}		% Größenverzeichnis ins Inhaltsverzeichnis
+  	\begin{spacing}{1.2}
+  		\printnomenclature
+  	\end{spacing}  
+  	\newpage
+ 
+  	% === Inhalt === %
+  	\pagenumbering{arabic}\setcounter{page}{1}
+  	
+  	\include{Seiten/einleitung}
+  	\include{Seiten/theorie}
+  	\include{Seiten/versuch}
+  	\include{Seiten/ergebnisse}
+  	\include{Seiten/fazit}
 
-  %===================================================
-  
-   %Literaturverzeichnis
-  
-  %---------------------------------------------------
-  \addcontentsline{toc}{chapter}{Literaturverzeichnis}
+   	% === Literaturverzeichnis === %
+  	\addcontentsline{toc}{chapter}{Literaturverzeichnis}
     \bibliographystyle{unsrt}
     \bibliography{literatur}
+
+	% === Abbildungsverzeichnis === %
+	\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+	\listoffigures
+	\newpage
   
-  %===================================================
+	% === Tabellenverzeichnis === %
+	\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+	\listoftables						
+	\newpage
   
-   %Abbildungsverzeichnis
-  
-  %---------------------------------------------------
-  \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
-  \listoffigures
-  \newpage
-  
-  %===================================================
-  
-   %Tabellenverzeichnis
-  
-%  ---------------------------------------------------
-  \addcontentsline{toc}{chapter}{Tabellenverzeichnis}
-  \listoftables							% Tabellenverzeichnis
-  \newpage
-  
- % ===================================================
-  
-  % Symbol- und Abkürzungsverzeichnis
-  
-  %---------------------------------------------------
-  \chapter*{Symbolverzeichnis}						% Symbolverzeichnis
-    \addcontentsline{toc}{chapter}{Symbolverzeichnis}			% fügt Symbolverzeichnis trotz * in das Inhaltsverzeichnis ein
-          \printglossary[type=symbolslist, title=Symbole und Indizes]		% symbols
-    \printglossary[type=acronymlist, title=Abk\"urzungen]		% abbreviations
- \glsaddall 
- % ===================================================
-  
-  % Anhang
-  
-  %---------------------------------
-  \begin{appendix}
-  	% SACHEN FÜR DEN ANHANG HIER INCLUDIEREN
-    %\include{Seiten/projekt}
-  \end{appendix}
+	% === Anhang === %
+	\begin{appendix}
+	 	% SACHEN FÜR DEN ANHANG HIER INCLUDIEREN
+	%\include{Seiten/anhang1}
+	\end{appendix}
 
 \end{document}

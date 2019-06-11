@@ -162,6 +162,16 @@
   		\printnomenclature
   	\end{spacing}  
   	\newpage
+
+	% === Abbildungsverzeichnis === %
+	\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+	\listoffigures
+	\newpage
+
+	% === Tabellenverzeichnis === %
+	\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+	\listoftables						
+	\newpage
  
   	% === Inhalt === %
   	\pagenumbering{arabic}\setcounter{page}{1}
@@ -169,23 +179,16 @@
   	\include{Seiten/einleitung}
   	\include{Seiten/theorie}
   	\include{Seiten/versuch}
-  	\include{Seiten/ergebnisse}
+  	\include{Seiten/massenabschaetzung}
+  	\include{Seiten/auswertung}
+  	\include{Seiten/darstellung}
+  	\include{Seiten/interpretation}
   	\include{Seiten/fazit}
 
    	% === Literaturverzeichnis === %
   	\addcontentsline{toc}{chapter}{Literaturverzeichnis}
     \bibliographystyle{unsrt}
     \bibliography{literatur}
-
-	% === Abbildungsverzeichnis === %
-	\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
-	\listoffigures
-	\newpage
-  
-	% === Tabellenverzeichnis === %
-	\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
-	\listoftables						
-	\newpage
   
 	% === Anhang === %
 	\begin{appendix}

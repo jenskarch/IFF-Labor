@@ -1,41 +1,55 @@
 \chapter{Einleitung}
+\label{chapter:einleitung}
 
-So funktionieren Formeln in Latex:
-\begin{center}
-	\begin{equation}
-		N = R^{*} \cdot f_{p} \cdot n_{e} \cdot f_{l} \cdot f_{i} \cdot f_{c} \cdot L 
-	\end{equation}
-\end{center}
+Eine Grundvoraussetzung um die Bewegung und Dynamik von Flugkörpern und insbesondere von Flugzeugen zu verstehen, ist das ermitteln wichtiger aerodynamischer Größen. Das Wort Aerodynamik setzt sich aus den zwei altgriechischen Wörtern \textit{aer} (dt. Luft) und \textit{dynamis} (dt. Kraft) zusammen und beschreibt somit das Verhalten eines Luftumströmten Körpers.
 
-% Einrücken von Text wird mit \noindent unterdrückt
-\noindent So werden Bilder eingefügt:\\
-
-\begin{figure}[h] % Das [h] sorgt dafür, dass das Bild exakt an dieser Stelle im Text eingefügt wird. Andernfalls sucht LaTeX automatisch nach einer Stelle in der Nähe wo das Bild am besten reinpasst
+\begin{figure}[h] 
 	\centering
-	\label{figure:kepler}
-	\includegraphics[width=0.2\textwidth]{kepler.jpg} % Breite = 0.2 x Seitenbreite
-	\caption[Kepler (Titel im Abk.-Verzeichnis)]{Titel unter dem Bild - Quelle: \cite{key}}
-	% als Quelle erscheint in der PDF ein [?], da der Eintrag "key" nicht in der literatur.bib Datei existiert
+	\label{figure:luftkraefte}
+	\includegraphics[width=0.4\textwidth]{einleitung_luftkraefte.png}
+	\caption{Luftkräfte an einem Flugzeug \cite{labor-skript}}
 \end{figure}
 
-\section{So wird eine neue Überschrift erstellt}
-So werden Abbildungen/Tabellen/Abschnitte referenziert: Abb. \ref{figure:kepler}\\
+\noindent Im Windkanal können solche umströmten Körper getestet werden, wobei durch direkte Kraftmessung ermittelt werden kann, wie groß die Luftkräfte (Auftrieb A \nomenclature{A}{Auftriebskraft}{[N]}{}, Widerstand W \nomenclature{W}{Widerstandskraft}{[N]}{} und die hier nicht näher betrachtete Querkraft Q \nomenclature{Q}{Querkraft}{[N]}{}) sind. Aus diesen Kräften lassen sich dann die dimensionslosen aerodynamischen Kennwerte ableiten.\\
+In diesem Labor sollen jedoch die aerodynamischen Eigenschaften des Forschungsflugzeugs der TU Braunschweig, einer Dornier Aircraft Do 128-6, analysiert werden. Natürlich kann ein Flugzeug mit diesen Dimensionen nicht ohne weiteres in einem Windkanal geprüft werden. Um also die aerodynamischen Größen zu ermitteln, bedienen wir uns in diesem Labor einer anderen Methode: der Bestimmung ohne direkter Kraftmessung im stationären Flugzustand. Diese Methodik wird in Kapitel \ref{chapter:versuch} genauer beschrieben.\\\\
+Das Labor hilft uns das theoretische Wissen, welches wir in Vorlesungen wie Flugmechanik I erlernt haben, auf die Probe zu stellen und erstmals praktisch einzusetzen. Dazu zählt das be- und umrechnen diverser flugmechanischer Größen, aber auch die Erstellung, Analyse und Interpretation von charakteristischen Diagrammen, wie zum Beispiel der LILIENTHAL-Polare. Dabei werden wir nicht immer auf verlässliche Daten stoßen und lernen dem entsprechend auch mit solchen fehlerbehafteten Daten sinnvoll umzugehen.
 
-\subsection{So wird eine neue Unterüberschrift erstellt}
-Das sind die Absatzarten:\\
-Einfacher Absatz\\\\
-Absatz mit Abstand\\
-
-Absatz mit Abstand, mit Einrücken\\\\
-
-\noindent Bestimmte Zeichen wie z.B. \& müssen mit vorangehendem Backslash versehen werden, da sie ansonsten als LaTeX Steuerungszeichen interpretiert werden. ,,Gänsefüßchen`` gehen so...
-
-\newpage
-
-\noindent Alle verwendeten Symbole müssen ins das Nomenklaturverzeichnis eingetragen werden. Dazu werden folgende Befehle genutzt (siehe LaTeX Quellocode).
-
-\nomenclature[AF]{$F$}{Kraft}{N}{}
-\nomenclature[Am]{$m$}{Masse}{kg}{}
+%So funktionieren Formeln in Latex:
+%\begin{center}
+%	\begin{equation}
+%		N = R^{*} \cdot f_{p} \cdot n_{e} \cdot f_{l} \cdot f_{i} \cdot f_{c} \cdot L 
+%	\end{equation}
+%\end{center}
+%
+% Einrücken von Text wird mit \noindent unterdrückt
+%\noindent So werden Bilder eingefügt:\\
+%
+%\begin{figure}[h] % Das [h] sorgt dafür, dass das Bild exakt an dieser Stelle im Text eingefügt wird. Andernfalls sucht LaTeX automatisch nach einer Stelle in der Nähe wo das Bild am besten reinpasst
+%	\centering
+%	\label{figure:kepler}
+%	\includegraphics[width=0.2\textwidth]{kepler.jpg} % Breite = 0.2 x Seitenbreite
+%	\caption[Kepler (Titel im Abk.-Verzeichnis)]{Titel unter dem Bild - Quelle: \cite{key}}
+%	 als Quelle erscheint in der PDF ein [?], da der Eintrag "key" nicht in der literatur.bib Datei existiert
+%\end{figure}
+%
+%\section{So wird eine neue Überschrift erstellt}
+%So werden Abbildungen/Tabellen/Abschnitte referenziert: Abb. \ref{figure:kepler}\\
+%
+%\subsection{So wird eine neue Unterüberschrift erstellt}
+%Das sind die Absatzarten:\\
+%Einfacher Absatz\\\\
+%Absatz mit Abstand\\
+%
+%Absatz mit Abstand, mit Einrücken\\\\
+%
+%\noindent Bestimmte Zeichen wie z.B. \& müssen mit vorangehendem Backslash versehen werden, da sie ansonsten als LaTeX Steuerungszeichen interpretiert werden. ,,Gänsefüßchen`` gehen so...
+%
+%\newpage
+%
+%\noindent Alle verwendeten Symbole müssen ins das Nomenklaturverzeichnis eingetragen werden. Dazu werden folgende Befehle genutzt (siehe LaTeX Quellocode).
+%
+%\nomenclature[AF]{$F$}{Kraft}{N}{}
+%\nomenclature[Am]{$m$}{Masse}{kg}{}
 
 
 

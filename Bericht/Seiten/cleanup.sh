@@ -1,0 +1,31 @@
+#!/bin/bash
+cd -- "$(dirname "$BASH_SOURCE")"
+rm -f *.bbl
+rm -f *.aux
+rm -f *.idx
+rm -f *.nlo
+rm -f *.toc
+rm -f *.lot
+rm -f *.lof
+rm -f *.ind
+rm -f *.ilg
+rm -f *.log
+rm -f *.nls
+rm -f *.blg
+rm -f *.mst
+rm -f *.nav
+rm -f *.out
+rm -f *.snm
+rm -f *.vrb
+rm -f *.synctex.gz
+rm -f *.acn
+rm -f *.acr
+rm -f *.alg
+rm -f *.glg
+rm -f *.glo
+rm -f *.gls
+rm -f *.glsdefs
+rm -f *.ist
+rm -f *.slg1
+rm -f *.syg
+rm -f *.syi

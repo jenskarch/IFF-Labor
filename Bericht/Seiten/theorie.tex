@@ -1,4 +1,59 @@
 \chapter{Theoretische Grundlagen}
 \label{chapter:theorie}
+Um die aerodynamischen Größen, wie Auftrieb, Widerstand und deren Beiwerte ohne direkte Kraftmessung zu bestimmen, sind einige Formeln sowie theoretische Grundlagen erforderlich. Da für den Flugversuch nur der stationäre Sinkflug ohne Schub (Gleiten) relevant ist, wird im Folgendem nur dieser Zustand betrachtet. \\ \\
+Zusätzlich werden folgende Vereinfachungen getroffen:
+\begin{itemize}
+	\item konst. Bahnwinkel: $\gamma = const.$ 
+	\item Propellerschub gleicht Propellerwiderstand aus: $F=0$
+	\item konst. Geschwindigkeit $V_IAS = const.$
+	\item Instrumente sind auf Standardatmosphäre kalibriert
+	\item Einbaufehler der Messinstrumente werden nicht berücksichtigt
+	\item Vernachlässigung vom Wind
+\end{itemize}
+
+\section{Stationärer Gleitflug}
+Der Grundsatz des stationären Fluges ist, dass die am Flugzeug angreifenden Kräfte im Gleichgewicht stehen. \\
+Das Kräftegleichgewicht mit den zuvor getroffenen Annahmen liefert:
+\begin{equation}
+\label{eq:kräftegleichgewichtWiderstand}
+W + mg*sin(\gamma) = 0
+\end{equation}
+\nomenclature[GG]{$\gamma$}{Bahnneigungswinkel}{[°]}{}%
+\nomenclature[AM]{$m$}{Masse}{[$kg$]}{}%
+\nomenclature[AG]{$g$}{Erdbeschleunigung}{[$m/s^2$]}{}%
+\begin{equation}
+\label{eq:kräftegleichgewichtAuftrieb}
+A - mg*cos(\gamma) = 0
+\end{equation}
+Durch trigonometrische Beziehungen ergibt sich:
+\begin{equation}
+\label{eq:bahnneigungswinkel}
+tan(\gamma) = -\frac{w_g}{V}
+\end{equation}
+\nomenclature[AW]{$w_g$}{Sinkgeschwindigkeit}{[$m/s$]}{}%
+\nomenclature[AV]{$w_g$}{Geschwindigkeit}{[$m/s$]}{}%
+Abbildung \ref{figure:luftkraefte} verdeutlicht diese Zusammenhänge.\\ \\
+Der nach oben hin positiv definierte Bahnwinkel $\gamma$ ergibt sich aus dem Kräftegleichgewicht zu:
+\begin{equation}
+tan(\gamma)=-\frac{W}{A}
+\end{equation}
+und unter Verwendung der Auftriebs- und Widerstandsbeiwerte zu:
+\begin{equation}
+tan(\gamma)=-\frac{C_W}{C_A}
+\end{equation}
+\nomenclature[AC]{$C_A$}{Auftriebsbeiwert}{[1]}{}%
+\nomenclature[AC]{$C_W$}{Widerstandsbeiwert}{[1]}{}%
+Um Aussagen über die aerodynamische Güte eines Flugzeuges treffen zu können wird die reziproke Gleitzahl $\epsilon$ eingeführt. Sie ergibt sich aus dem Verhältnis aus Widerstand und Auftrieb.
+\begin{equation}
+\varepsilon=\frac{W}{A}=-tan(\gamma)
+\end{equation}
+\nomenclature[GE]{$\varepsilon$}{reziproke Gleitzahl}{[1]}{}%
+
+\section{Umrechnen der Versuchsdaten}
+\subsection{Fluggeschwindigkeit}
+Die bei dem Testflug abgelesene Fluggeschwindigkeit ($V_{IAS}$: indicated airspeed) muss vor der Auswertung in die reale Geschwindigkeit ($V_{TAS}$: true airspeed) umgerechnet werden.
+\begin{equation}
+V_{TAS}=V_{IAS}*\sqrt{\frac{\varrho_0}{\varrho_{real}}}
+\end{equation}
 
 \newpage

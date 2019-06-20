@@ -43,7 +43,7 @@ tan(\gamma)=-\frac{C_W}{C_A}
 \end{equation}
 \nomenclature[AC]{$C_A$}{Auftriebsbeiwert}{[1]}{}%
 \nomenclature[AC]{$C_W$}{Widerstandsbeiwert}{[1]}{}%
-Um Aussagen über die aerodynamische Güte eines Flugzeuges treffen zu können wird die reziproke Gleitzahl $\epsilon$ eingeführt. Sie ergibt sich aus dem Verhältnis aus Widerstand und Auftrieb.
+Um Aussagen über die aerodynamische Güte eines Flugzeuges treffen zu können wird die reziproke Gleitzahl $\epsilon$ eingeführt. Sie ergibt sich aus dem Verhältnis von Widerstand und Auftrieb.
 \begin{equation}
 \varepsilon=\frac{W}{A}=-tan(\gamma)
 \end{equation}
@@ -52,8 +52,15 @@ Um Aussagen über die aerodynamische Güte eines Flugzeuges treffen zu können w
 \section{Umrechnen der Versuchsdaten}
 \subsection{Fluggeschwindigkeit}
 Die bei dem Testflug abgelesene Fluggeschwindigkeit ($V_{IAS}$: indicated airspeed) muss vor der Auswertung in die reale Geschwindigkeit ($V_{TAS}$: true airspeed) umgerechnet werden.
-\begin{equation}
+\begin{equation} \label{eq:VTAS}
 V_{TAS}=V_{IAS}*\sqrt{\frac{\varrho_0}{\varrho_{real}}}
+\end{equation} 
+Die reale Dichte ergibt sich unter Annahme einer isobaren Zustandsänderung aus:
+\begin{equation} \label{eq:roh_real}
+\varrho_{real} = \varrho_{INA} * \frac{T_{INA}}{T_{real}}
 \end{equation}
-
+Gl. \ref{eq:roh_real} in Gl. \ref{eq:VTAS}:
+\begin{equation}
+V_{TAS}=V_{IAS}*\sqrt{\frac{\varrho_0}{\varrho_0}*\frac{T_{real}}{T_{INA}}}
+\end{equation}
 \newpage

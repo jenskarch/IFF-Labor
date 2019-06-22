@@ -28,7 +28,7 @@ Das genutzte Forschungsflugzeug war eine Do 128-6 aus dem Hause Dornier Aircraft
 \end{center}
 \vspace{0.8cm}
 
-\noindent Um 13:18 Uhr hob das Flugzeug auf Piste 26 in Richtung Westen ab. Nach etwa 8 Minuten begann der eigentliche Versuch, indem der Pilot vier stationäre Sinkflüge mit unterschiedlichen Geschwindigkeiten einleitete. Ziel war es dabei einen Gleitflug zu simulieren, also die Sinkflüge ohne Schub durchzuführen. Da die Triebwerke allerdings Widerstand erzeugen, wurde der Schub nicht ganz auf Null zurückgefahren, sondern nur soweit, dass dieser Widerstand überwunden wird. Durch diese Methode lassen sich die Luftkräfte (Auftrieb und Widerstand) nach Gleichung \ref{eq:kräftegleichgewichtAuftrieb} und \ref{eq:kräftegleichgewichtWiderstand} berechnen.\\\\  
+\noindent Um 13:18 Uhr hob das Flugzeug auf Piste 26 in Richtung Westen ab. Nach etwa 8 Minuten begann der eigentliche Versuch, indem der Pilot vier stationäre Sinkflüge mit unterschiedlichen Geschwindigkeiten einleitete. Ziel war es dabei einen Gleitflug zu simulieren, also die Sinkflüge ohne Schub durchzuführen. Da die Triebwerke allerdings Widerstand erzeugen, wurde der Schub nicht vollständig zurückgefahren, sondern nur soweit, dass der Triebwerkswiderstand überwunden wird. Durch diese Methode lassen sich die Luftkräfte (Auftrieb und Widerstand) nach Gleichung \ref{eq:kräftegleichgewichtAuftrieb} und \ref{eq:kräftegleichgewichtWiderstand} berechnen.\\\\  
 Um 13:40 Uhr landete das Flugzeug wieder am Forschungsflugzeug. Der Versuch war damit beendet.
 
 \section{Messdaten}
@@ -41,12 +41,18 @@ Die nachfolgende Tabelle zeigt unsere ermittelten Messdaten zu den Sinkflügen. 
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline
 		& \multicolumn{1}{l|}{\textbf{$V_{IAS}$}} & \multicolumn{1}{l|}{\textbf{Zeitintervall}} & \multicolumn{1}{l|}{\textbf{Temp. (Start)}} & \multicolumn{1}{l|}{\textbf{Temp. (Ende)}} & \multicolumn{1}{l|}{\textbf{Verbrauch (Start)}} & \multicolumn{1}{l|}{\textbf{Verbrauch (Ende)}} \\ \hline
-		1 & 80 kt                                         & 1 min 38 s                                  & 12,0 °C                                 & 14,5 °C                                & 83 lbs                                          & 90 lbs                                         \\ \hline
-		2 & 100 kt                                        & 1 min 08 s                                  & 12,0 °C                                 & 15,0 °C                                & 107 lbs                                         & 113 lbs                                        \\ \hline
-		3 & 120 kt                                        & 48 s                                        & 13,0 °C                                 & 16,0 °C                                & 130 lbs                                         & 134 lbs                                        \\ \hline
-		4 & 140 kt                                         & 31 s                                        & 13,0  °C                                & 15,0 °C                                & 148 lbs                                         & 150 lbs                                        \\ \hline
+		1 & 80 kt          & 1 min 38 s         & 12,0 °C         & 14,5 °C       & 83 lbs / 37,65 kg        & 90 lbs / 40,82 kg    \\ \hline
+		2 & 100 kt         & 1 min 08 s         & 12,0 °C         & 15,0 °C       & 107 lbs / 48,53 kg       & 113 lbs / 51,26 kg   \\ \hline
+		3 & 120 kt         & 48 s               & 13,0 °C         & 16,0 °C       & 130 lbs / 58,97 kg       & 134 lbs / 60,78 kg   \\ \hline
+		4 & 140 kt         & 31 s               & 13,0  °C        & 15,0 °C       & 148 lbs / 67,13 kg       & 150 lbs / 68,04 kg   \\ \hline
 	\end{tabular}
-	\caption{Messergebnisse aus dem Flugversuch}
+	\caption{Messergebnisse aus dem Flugversuch} \label{tab:messergebnisse}
 \end{table}
+
+\noindent Für die Umrechnung der in Pfund abgelesenen Verbrauchswerte in das Kilogramm, wurde dabei folgende Umrechnungsformel zugrunde gelegt.\\
+
+\begin{equation}
+m_{kg} = \frac{m_{lbs}}{2,205}
+\end{equation}
 
 \newpage

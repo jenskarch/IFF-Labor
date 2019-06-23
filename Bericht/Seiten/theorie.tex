@@ -13,27 +13,29 @@ Zusätzlich werden folgende Vereinfachungen getroffen:
 
 \vspace{1cm}
 \section{Stationärer Gleitflug}
-Der Grundsatz des stationären Fluges ist, dass die am Flugzeug angreifenden Kräfte im Gleichgewicht stehen. \\
+Der Grundsatz des stationären Fluges ist, dass die am Flugzeug angreifenden Kräfte im Gleichgewicht stehen und somit das Flugzeug weder beschleunigt noch verzögert. Bei dem Gleitflug kommt hinzu, dass die Schubkraft gleich null ist.
+\subsection{Widerstand und Auftrieb}
 Das Kräftegleichgewicht mit den zuvor getroffenen Annahmen liefert:
 \begin{equation}
 \label{eq:kräftegleichgewichtWiderstand}
-W + mg*sin(\gamma) = 0
+W + mg \cdot sin(\gamma) = 0
 \end{equation}
 \nomenclature[GG]{$\gamma$}{Bahnneigungswinkel}{[°]}{}%
 \nomenclature[AM]{$m$}{Masse}{[$kg$]}{}%
 \nomenclature[AG]{$g$}{Erdbeschleunigung}{[$m/s^2$]}{}%
 \begin{equation}
 \label{eq:kräftegleichgewichtAuftrieb}
-A - mg*cos(\gamma) = 0
+A - mg \cdot cos(\gamma) = 0
 \end{equation}
-Durch trigonometrische Beziehungen ergibt sich:
+Abbildung \ref{figure:luftkraefte} verdeutlicht diese Zusammenhänge. \\  \\
+Für spätere Berechnungen sind die Widerstands- sowie Auftriebsbeiwerte wesentlich wichtiger als die absoluten Werte.
 \begin{equation}
-\label{eq:bahnneigungswinkel}
-sin(\gamma) = -\frac{w_g}{V}
+C_W = \frac{-mg \cdot sin(\gamma)}{0,5  \cdot  \varrho  \cdot  S  \cdot  V^2}
 \end{equation}
-\nomenclature[AW]{$w_g$}{Sinkgeschwindigkeit}{[$m/s$]}{}%
-\nomenclature[AV]{$w_g$}{Geschwindigkeit}{[$m/s$]}{}%
-Abbildung \ref{figure:luftkraefte} verdeutlicht diese Zusammenhänge.\\ \\
+\begin{equation}
+C_A = \frac{mg \cdot cos(\gamma)}{0,5  \cdot  \varrho  \cdot  S  \cdot  V^2}
+\end{equation}
+\subsection{Bahnwinkel und Gleitzahl}
 Der nach oben hin positiv definierte Bahnwinkel $\gamma$ ergibt sich aus dem Kräftegleichgewicht zu:
 \begin{equation}
 tan(\gamma)=-\frac{W}{A}
@@ -42,9 +44,16 @@ und unter Verwendung der Auftriebs- und Widerstandsbeiwerte zu:
 \begin{equation}
 tan(\gamma)=-\frac{C_W}{C_A}
 \end{equation}
+Durch trigonometrische Beziehungen ergibt sich wie in Abb. \ref{figure:luftkraefte} zu sehen:
+\begin{equation}
+\label{eq:bahnneigungswinkel}
+sin(\gamma) = -\frac{w_g}{V}
+\end{equation}
+\nomenclature[AW]{$w_g$}{Sinkgeschwindigkeit}{[$m/s$]}{}%
+\nomenclature[AV]{$V$}{Geschwindigkeit}{[$m/s$]}{}%
 \nomenclature[AC]{$C_A$}{Auftriebsbeiwert}{[1]}{}%
 \nomenclature[AC]{$C_W$}{Widerstandsbeiwert}{[1]}{}%
-Um Aussagen über die aerodynamische Güte eines Flugzeuges treffen zu können wird die reziproke Gleitzahl $\epsilon$ eingeführt. Sie ergibt sich aus dem Verhältnis von Widerstand und Auftrieb.
+Um Aussagen über die aerodynamische Güte eines Flugzeuges treffen zu können wird die reziproke Gleitzahl $\varepsilon$ eingeführt. Sie ergibt sich aus dem Verhältnis von Widerstand und Auftrieb.
 \begin{equation}
 \varepsilon=\frac{W}{A}=-tan(\gamma)
 \end{equation}
@@ -54,14 +63,30 @@ Um Aussagen über die aerodynamische Güte eines Flugzeuges treffen zu können w
 \subsection{Fluggeschwindigkeit}
 Die bei dem Testflug abgelesene Fluggeschwindigkeit ($V_{IAS}$: indicated airspeed) muss vor der Auswertung in die reale Geschwindigkeit ($V_{TAS}$: true airspeed) umgerechnet werden.
 \begin{equation} \label{eq:VTAS}
-V_{TAS}=V_{IAS}*\sqrt{\frac{\varrho_0}{\varrho_{real}}}
+V_{TAS}=V_{IAS} \sqrt{\frac{\varrho_0}{\varrho_{real}}}
 \end{equation} 
 Die reale Dichte ergibt sich unter Annahme einer isobaren Zustandsänderung aus:
 \begin{equation} \label{eq:roh_real}
-\varrho_{real} = \varrho_{INA} * \frac{T_{INA}}{T_{real}}
+\varrho_{real} = \varrho_{INA}  \cdot  \frac{T_{INA}}{T_{real}}
 \end{equation}
-Gl. \ref{eq:roh_real} in Gl. \ref{eq:VTAS}:
+Gl. \ref{eq:roh_real} in Gl. \ref{eq:VTAS} ergibt:
 \begin{equation}
-V_{TAS}=V_{IAS}*\sqrt{\frac{\varrho_0}{\varrho_0}*\frac{T_{real}}{T_{INA}}}
+V_{TAS}=V_{IAS} \sqrt{\frac{\varrho_0}{\varrho_{INA}} \cdot \frac{T_{real}}{T_{INA}}}
 \end{equation}
+\nomenclature[AS]{$S$}{Flügelfläche}{[$m^2$]}{}%
+\subsection{Höhendifferenz und Sinkgeschwindigkeit}
+Da bei dem Testflug der Höhenmesser auf Standardatmosphäre eingestellt war, muss die angezeigte Höhe zuerst in die reale Höhe umgerechnet werden.
+\begin{equation} \label{eq:deltaH_real}
+\Delta H_{real} = \Delta H_{INA}  \cdot  \frac{\varrho_{INA}}{\varrho_{real}}
+\end{equation}
+Gl. \ref{eq:roh_real} in Gl. \ref{eq:deltaH_real} ergibt:
+\begin{equation}
+\Delta H_{real} = \Delta H_{INA}  \cdot  \frac{T_{real}}{T_{INA}}
+\end{equation}
+Um die Sinkgeschwindigkeit zu errechnen muss der Quotient aus zurückgelegter vertikaler Strecke mit der dazu benötigten Zeit gebildet werden:
+\begin{equation}\label{eq:wg_real}
+w_{g_{real}}=\frac{\Delta H_{real}}{\Delta t} = \frac{\Delta H_{INA}}{\Delta t}  \cdot  \frac{T_{real}}{T_{INA}}
+\end{equation}
+
+
 \newpage

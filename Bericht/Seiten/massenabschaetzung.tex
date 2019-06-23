@@ -1,7 +1,6 @@
-\chapter{Massenabschätzung}
+\chapter{Massenabschätzung (Do 28)}
 \label{chapter:masse}
-Neben den Messdaten aus unserem Flugversuch, liegen uns auch Messreihen aus einem anderen Flugversuch mit einer Dornier Aircraft Do28 vor.
-Die Massenabschätzung der Do 28 erfolgt auf der Grundlage von zuvor ermittelten Messdaten, welche uns in diesem Labor zur Verfügung gestellt werden. \\
+Neben den Messdaten aus unserem Flugversuch, liegen uns auch Messreihen aus einem anderen Flugversuch mit einer Dornier Aircraft Do 28 vor. Auch diese genaueren Messwerte wollen wir zur Analyse nutzen. Vorerst muss jedoch die Masse des Flugzeugs aus diesem Versuch in seinen einzelnen Flugphasen abgeschätzt werden. Dazu stehen uns folgende Daten zur Verfügung. \\
 
 \begin{table}[h]
 	\centering
@@ -12,13 +11,13 @@ Die Massenabschätzung der Do 28 erfolgt auf der Grundlage von zuvor ermittelten
 	$m_{Besatzung}$ 	 & 346			& {kg}		  \\ \hline
 	$m_{Kraftst,Start}$	 & 414			& {kg}		  \\ \hline
 	$m_{Kraftst,Ende}$	 & 296			& {kg}		  \\ \hline
-	$\dot{m}_{Kraftst,Sinkflug}$    & 0,035			& {kg/s}		  \\ \hline
-	$\dot{m}_{Kraftst,Steigflug}$ 	 & 0,101			& {kg/s}	  \\ \hline
+	%$\dot{m}_{Kraftst,Sinkflug}$    & 0,035			& {kg/s}		  \\ \hline
+	%$\dot{m}_{Kraftst,Steigflug}$ 	 & 0,101			& {kg/s}	  \\ \hline
 		
 
 
 \end{tabular}
-	\caption{Massen und Kraftstoffverbrauch der Do 28}
+	\caption{Massen der Do 28}
 \end{table}
 
 
@@ -42,9 +41,9 @@ Die Massenabschätzung der Do 28 erfolgt auf der Grundlage von zuvor ermittelten
 \vspace{0.3cm} 
 
 % TODO Gleichungen
-Wie in Gleichung 2.X zu erkennen ist, setzt sich die Gesamtmasse des Flugzeugs aus der Rüstmasse, der Besatzungsmasse und der aktuellen Treibstoffmasse zusammen. Die Rüst- und Besatzungsmasse bleiben über den Flug konstant, lediglich die Kraftstoffmasse verringert sich auf Grund des Verbrauchs. Wir wissen, dass der Tank bei Versuchsstart zu 70 \% und bei Versuchsende zu 50 \% gefüllt ist. Das maximale Tankvolumen entspricht 822 {l} und der verwendete Kraftstoff besitzt eine Dichte von $\rho_{Kraftst}$ = 0,72 {kg/l}. Damit lässt sich mit Gleichung 2.Y die maximale Kraftstoffmasse berechnen und mit den gegebenen Volumina zu Versuchsstart und -ende auf die dort vorliegende Kraftstoffmasse schließen.
+\noindent Wie in Gleichung 2.X zu erkennen ist, setzt sich die Gesamtmasse des Flugzeugs aus der Rüstmasse, der Besatzungsmasse und der aktuellen Treibstoffmasse zusammen. Die Rüst- und Besatzungsmasse bleiben über den Flug konstant, lediglich die Kraftstoffmasse verringert sich auf Grund des Verbrauchs. Wir wissen, dass der Tank bei Versuchsstart zu 70 \% und bei Versuchsende zu 50 \% gefüllt ist. Das maximale Tankvolumen entspricht 822 {l} und der verwendete Kraftstoff besitzt eine Dichte von $\rho_{Kraftst}$ = 0,72 {kg/l}. Damit lässt sich mit Gleichung 2.Y die maximale Kraftstoffmasse berechnen und mit den gegebenen Volumina zu Versuchsstart und -ende auf die dort vorliegende Kraftstoffmasse schließen.
 \\
-Da wir durch den eigens durchgeführten Versuch mit der Do 128-6 den Kraftstoffverbrauch pro Sinkflug aufgezeichnet haben und die Triebwerke in soweit Schub erzeugen, dass sie den Propellerwiderstand ausgleichen, können wir übertragen auf die Do 28 nicht davon ausgehen, dass während der Sinkflüge kein Kraftstoff verbraucht wird. Aufgrund fehlender Verbrauchsdaten der Do 28 im Sink- und Steigflug nehmen wir wegen der großen Ähnlichkeit beider Flugzeuge (vergleichbarer Propellerwiderstand) an, dass die Do 28 in etwa den gleichen Kraftstoffverbrauch im Sinkflug hat, wie die Do 128-6.
+Da wir durch den eigens durchgeführten Versuch mit der Do 128-6 den Kraftstoffverbrauch pro Sinkflug aufgezeichnet haben und die Triebwerke soviel Schub erzeugen, dass sie den Propellerwiderstand ausgleichen, können wir übertragen auf die Do 28 nicht davon ausgehen, dass während der Sinkflüge kein Kraftstoff verbraucht wird. Aufgrund fehlender Verbrauchsdaten der Do 28 im Sink- und Steigflug nehmen wir wegen der großen Ähnlichkeit beider Flugzeuge (vergleichbarer Propellerwiderstand) an, dass die Do 28 in etwa den gleichen Kraftstoffverbrauch im Sinkflug hat, wie die Do 128-6.
 \\
 Wir können also den mittleren Kraftstoffverbrauch im Sinkflug ermitteln, indem wir die verbrauchte Kraftstoffmasse durch die Summe der Zeit, die jeder Sinkflug in Anspruch genommen hat, teilen. Entsprechende Daten erhalten wir aus Tabelle \ref{tab:messergebnisse} und somit ergibt sich folgender gemittelte Kraftstoffverbrauch im Sinkflug.
 
@@ -102,7 +101,7 @@ m_{2,Ende} = m_{2,Start} - (0,035 \; {kg/s} * 320 \; {s}) = 3657,3 \; {kg} - 11,
 m_{2,Mittelwert} = \frac{m_{2,Start} + m_{2,Ende}}{2} = 3651,5 \; {kg} \thickapprox 3652 \; {kg}
 \end{equation*} \\
 
-Da es sich bei diesen Rechnungen um eine Massenabschätzung handelt, runden wir die Gewichte auf ganze Zahlen. Es ist klar, dass durch diese Abschätzungen eine gewisse Toleranz vorliegt, in der sich das Flugzeuggewicht befindet. Auch ist es nicht klar, ob die Annahmen der Mittlungen der Verbräuche, sowie des gleichen Kraftstoffverbrauchs im Sinkflug angemessen sind. Die Ergebnisse der Flugzeugmassen in den einzelnen Sinkflügen sind in nachstehender Tabelle dargestellt.
+\noindent Da es sich bei diesen Rechnungen um eine Massenabschätzung handelt, runden wir die Gewichte auf ganze Zahlen. Es ist klar, dass durch diese Abschätzungen eine gewisse Toleranz vorliegt, in der sich das Flugzeuggewicht befindet. Auch ist es nicht klar, ob die Annahmen der Mittlungen der Verbräuche, sowie des gleichen Kraftstoffverbrauchs im Sinkflug angemessen sind. Die Ergebnisse der Flugzeugmassen in den einzelnen Sinkflügen sind in nachstehender Tabelle dargestellt.
 
 \begin{table}[h]
 	\centering

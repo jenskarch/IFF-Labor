@@ -1,0 +1,48 @@
+Kapitel 8
+
+Vorgenommene Umrechnungen (ggf. Formel oder Werte oder Tabellen aus Theorie oder Massenabschätzung zitieren)
+
+Do 128
+
+messdaten sind T real, H INA, VIAS
+umrechnungen in si basiseinheiten ft -> m , kn -> m/s , lbs -> kg , °C -> K
+bestimmung der INA werte von rho, T
+bestimmung von rho real
+bestimmung von q
+bestimmung von VTAS über q und rho real
+
+bestimmung von wg real, A, W, gamma rad (erstmal radians weil das tabellenprogramm das so macht)
+umrechnung gamma rad -> gamma deg
+bestimmung der ca und cw werte
+
+umrechnung der geschwindigkeitswerte in kn (eine formalität)
+
+Lilienthalpolare erstellt, poly 2. grades als regression
+W über V aufgetragen, in N und m/s
+
+Do 28
+
+Stichproben:
+
+INA von H und T aus Tabelle entnommen
+q, alpha, eta den messchrieben entnommen und den INAs von H und T zugeordnet
+q zu rechenzwecken in Pa umgerechnet
+bestimmung INA rho und T
+bestimmung rho real
+bestimmung V_TAS (!aus q!)
+bestimmung von wg,real
+bestimmung von gamma rad -> umrechnung gamma deg
+bestimmung von A, W, Ca, Cw
+
+umrechnung der geschwindigkeitswerte in kn (rein formell)
+
+lilienthalpolare erstellt, poly 2. grades als regression
+W über V ( N über m/s)
+alpha über eta
+V q über alpha
+Ca über alpha
+
+
+Kapitel 9
+
+Entsprechende Tabellen screenshotten. Sind auf jeden Fall alle da.

@@ -2,27 +2,36 @@
 \label{chapter:auswertung}
 
 \section{Do 128-6 (eigener Flugversuch)}
-
+Die bei dem Versuch abgelesene Daten ($T_{real}$ in °$C$, $H_{INA}$ in $ft$, $V_{IAS}$ in $kn$) müssen vor der Analyse in SI Basiseinheiten (°$C  \rightarrow K$, $ft \rightarrow m$, $kn \rightarrow m/s$) umgerechnet werden. In Tab. \ref{tab:umrechnung_einheiten} sind diese Umrechnungen aufgeführt.
+\begin{table}[h]
+	\centering
+	\begin{tabular}{l l}
+		\hline
+		Höhe & $1$ $ft=0,3048\,m$ \\
+		Geschwindigkeit&   $1\,kn=0,51\,m/s$\\
+		Temperatur &  $t\,^\circ C=t\frac{K}{^\circ C}+273,15\,K$\\
+		\hline		
+	\end{tabular}
+	\caption{Umrechnungstabelle auf SI Basiseinheiten} \label{tab:umrechnung_einheiten}
+\end{table} \\
 Da, bedingt durch das Wetter, am Versuchstag keine Standardatmosphärenbedingungen herrschten, muss die in Kapitel 2 hergeleitete Formel \ref{eq:wg_real} verwendet werden, um die wahre Sinkgeschwindigkeit $w_{g,real}$ für die einzelnen Sinkflüge bestimmen zu können. Dazu ist eine berechnete theoretische Temperatur aus der Normatmosphäre nötig, nämlich die Temperatur, welche laut Normatmosphäre bei Standardatmosphärenbedingungen in der jeweiligen Höhe herrschen würde. Beispielhaft sei hier die Rechnung für den ersten Sinkflug gegeben:\\
 
 \underline{Beispiel: 1. Sinkflug}
 
 \begin{equation}
-T_{INA}(2500m) = 288,15 K - 0,0065 \frac{K}{m} \cdot 2500m = 271,9 K
+T_{INA}(2500m) = 288,15\,K - 0,0065 \frac{K}{m} \cdot 2500\,m = 271,9\,K
 \end{equation}
 \begin{equation}
-T_{INA}(1500m) = 288,15 K - 0,0065 \frac{K}{m} \cdot 1500m = 278,4 K
+T_{INA}(1500m) = 288,15\,K - 0,0065 \frac{K}{m} \cdot 1500\,m = 278,4\,K
 \end{equation}
 \begin{equation}
-T_{INA,mittel} = \frac{271,9K + 278,4K}{2} = 275,15 K
+T_{INA,mittel} = \frac{271,9\,K + 278,4\,K}{2} = 275,15\,K
 \end{equation}
 \begin{equation}
-T_{real,mittel} = \frac{12^\circ C + 14,5^\circ C}{2} = 13,25^\circ C =	286,4 K
+T_{real,mittel} = \frac{12\,^\circ C + 14,5\,^\circ C}{2} = 13,25\,^\circ C =	286,4\,K
 \end{equation}
-
-% TODO 10 m/s ?!!
 \begin{equation}
-w_{g,real} = \frac{-1000m}{98s} \cdot \frac{286,4K}{275,15K} = - 10,6m/s
+w_{g,real} = \frac{-304,8\,m}{98\,s} \cdot \frac{286,4\,K}{275,15\,K} = - 3,24\,m/s
 \end{equation}
 
 

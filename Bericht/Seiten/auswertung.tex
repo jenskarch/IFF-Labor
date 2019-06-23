@@ -1,4 +1,31 @@
 \chapter{Auswertung der Messdaten}
 \label{chapter:auswertung}
 
+\section{Do 128-6 (eigener Flugversuch)}
+
+Da, bedingt durch das Wetter, am Versuchstag keine Standardatmosphärenbedingungen herrschten, muss die in Kapitel 2 hergeleitete Formel \ref{eq:wgreal} verwendet werden, um die wahre Sinkgeschwindigkeit $w_{g,real}$ für die einzelnen Sinkflüge bestimmen zu können. Dazu ist eine berechnete theoretische Temperatur aus der Normatmosphäre nötig, nämlich die Temperatur, welche laut Normatmosphäre bei Standardatmosphärenbedingungen in der jeweiligen Höhe herrschen würde. Beispielhaft sei hier die Rechnung für den ersten Sinkflug gegeben:\\
+
+\underline{Beispiel: Sinkflug 1}
+
+\begin{equation}
+T_{INA}(2500m) = 288,15 K - 0,0065 \frac{K}{m} \cdot 2500m = 271,9 K
+\end{equation}
+\begin{equation}
+T_{INA}(1500m) = 288,15 K - 0,0065 \frac{K}{m} \cdot 1500m = 278,4 K
+\end{equation}
+\begin{equation}
+T_{INA,mittel} = \frac{271,9K + 278,4K}{2} = 275,15 K
+\end{equation}
+\begin{equation}
+T_{real,mittel} = \frac{12^\circ C + 14,5^\circ C}{2} = 13,25^\circ C =	286,4 K
+\end{equation}
+
+% TODO 10 m/s ?!!
+\begin{equation}
+w_{g,real} = \frac{-1000m}{98s} \cdot \frac{286,4K}{275,15K} = - 10,6m/s
+\end{equation}
+
+
+\section{Do 28 (Messchriebe)}
+
 \newpage

@@ -12,6 +12,29 @@ Zusätzlich werden folgende Vereinfachungen getroffen:
 \end{itemize}
 
 \vspace{1cm}
+\section{Standardatmosphäre}
+Für die Auswertung der Versuchsdaten ist es erforderlich Kenntnis über die Standardatmosphäre zu haben. Wichtige Werte sind die Temperatur, Dichte sowie der Druck in den jeweiligen Höhen. In Tab. \ref{tab:atm_0} sind diese Werte auf Meereshöhe angegeben.
+\begin{table}[h]
+	\centering
+	\begin{tabular}{l}
+		\hline
+		$T_0=288,15$ $K$ \\
+		$p_0=101325$ $Pa$ \\
+		$\varrho_0 = 1,225$ $kg/m^3$ \\
+		\hline		
+	\end{tabular}
+	\caption{Werte der Normatmosphäre auf Meereshöhe} \label{tab:atm_0}
+\end{table}
+Um diese Werte für verschiedene Höhen zu berechnen, können folgende Gleichungen benutzt werden. Diese gelten nur für den Bereich zwischen 0 und 11km Höhe.
+\begin{equation}\label{eq:T_INA}
+T=288,15K - 0,0065 \frac{K}{m} \cdot H
+\end{equation}
+\begin{equation}\label{eq:p_INA}
+p=p_0\biggl[1-0,0065 \frac{K}{m} \cdot \frac{1}{288,15K} \cdot H\biggr]^{5,256}
+\end{equation}
+\begin{equation}\label{eq:roh_INA}
+\varrho = \varrho_0 \biggl[1-0,0065 \frac{K}{m} \cdot \frac{1}{288,15K} \cdot H\biggr]^{4,256}
+\end{equation}
 \section{Stationärer Gleitflug}
 Der Grundsatz des stationären Fluges ist, dass die am Flugzeug angreifenden Kräfte im Gleichgewicht stehen und somit das Flugzeug weder beschleunigt noch verzögert. Bei dem Gleitflug kommt hinzu, dass die Schubkraft gleich null ist.
 \subsection{Widerstand und Auftrieb}

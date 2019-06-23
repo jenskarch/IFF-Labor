@@ -7,12 +7,12 @@ Neben den Messdaten aus unserem Flugversuch, liegen uns auch Messreihen aus eine
 	\begin{tabular}{|l|c|c|}
 		\hline
 		\textbf{Größe}		 & \textbf{Wert}& \textbf{Einheit} \\ \hline
-		$m_{Ruest}$  		 & 2936			& {kg}        \\ \hline
-		$m_{Besatzung}$ 	 & 346			& {kg}		  \\ \hline
-		$m_{Kraftst,Start}$	 & 414			& {kg}		  \\ \hline
-		$m_{Kraftst,Ende}$	 & 296			& {kg}		  \\ \hline
-		$\sum m_{Start}$	 & 3282			& {kg}		  \\ \hline
-		$\sum m_{Ende}$	 & 3578			& {kg}		   \\ \hline
+		$m_{Ruest}$  		 & 2936			& $kg$        \\ \hline
+		$m_{Besatzung}$ 	 & 346			& $kg$		  \\ \hline
+		$m_{Kraftst,Start}$	 & 414			& $kg$		  \\ \hline
+		$m_{Kraftst,Ende}$	 & 296			& $kg$		  \\ \hline
+		$\sum m_{Start}$	 & 3282			& $kg$		  \\ \hline
+		$\sum m_{Ende}$	 & 3578			& $kg$		   \\ \hline
 		
 		%$\dot{m}_{Kraftst,Sinkflug}$    & 0,035			& {kg/s}		  \\ \hline
 		%$\dot{m}_{Kraftst,Steigflug}$ 	 & 0,101			& {kg/s}	  \\ \hline
@@ -26,35 +26,31 @@ Neben den Messdaten aus unserem Flugversuch, liegen uns auch Messreihen aus eine
 
 \begin{table}[h]
 	\centering
-	\begin{tabular}{|l|c|c|l|c|}
+	\begin{tabular}{|l|c|clc}
 		\cline{1-2} \cline{4-5}
-		\textbf{Sinkflug}		 & \textbf{Zeit}& \textbf{} & \textbf{Steigflug} & \textbf{Zeit} \\ \cline{1-2} \cline{4-5}
-		$\Delta t_1$  & 240 {s} & & $\Delta t_{1-2}$ & 300 s         \\ \cline{1-2} \cline{4-5}
-		$\Delta t_2$  & 320 {s} & & $\Delta t_{2-3}$ & 300 s		  \\ \cline{1-2} \cline{4-5}
-		$\Delta t_3$	 & 290 {s} & & $\Delta t_{3-4}$ & 230 s	  \\ \cline{1-2} \cline{4-5}
-		$\Delta t_4$	 & 120 {s} & &	&	  \\ \cline{1-2} \cline{4-5}
-		
-		
-		
-		
-		
+		\textbf{Sinkflug} & \textbf{Zeit} & \multicolumn{1}{c|}{} & \multicolumn{1}{l|}{\textbf{Steigflug}} & \multicolumn{1}{c|}{\textbf{Zeit}} \\ \cline{1-2} \cline{4-5} 
+		$\Delta t_1$      & 240 $s$       & \multicolumn{1}{c|}{} & \multicolumn{1}{l|}{$\Delta t_{1-2}$}   & \multicolumn{1}{c|}{300 $s$}         \\ \cline{1-2} \cline{4-5} 
+		$\Delta t_2$      & 320 $s$       & \multicolumn{1}{c|}{} & \multicolumn{1}{l|}{$\Delta t_{2-3}$}   & \multicolumn{1}{c|}{300 $s$}         \\ \cline{1-2} \cline{4-5} 
+		$\Delta t_3$      & 290 $s$       & \multicolumn{1}{c|}{} & \multicolumn{1}{l|}{$\Delta t_{3-4}$}   & \multicolumn{1}{c|}{230 $s$}         \\ \cline{1-2} \cline{4-5} 
+		$\Delta t_4$      & 120 $s$       &                       &                                         &                                    \\ \cline{1-2}
 	\end{tabular}
-	\caption{Zeitintervalle der Steig- und Sinkflüge} \label{tab:do28-deltat}
-\end{table} 
+	\caption{Zeitintervalle der Steig- und Sinkflüge}
+	\label{tab:do28-deltat}
+\end{table}
 \vspace{0.3cm} 
 
 % TODO Gleichungen
-\noindent Wie in Gleichung 2.X zu erkennen ist, setzt sich die Gesamtmasse des Flugzeugs aus der Rüstmasse, der Besatzungsmasse und der aktuellen Treibstoffmasse zusammen. Die Rüst- und Besatzungsmasse bleiben über den Flug konstant, lediglich die Kraftstoffmasse verringert sich auf Grund des Verbrauchs. Wir wissen, dass der Tank bei Versuchsstart zu 70 \% und bei Versuchsende zu 50 \% gefüllt ist. Das maximale Tankvolumen entspricht 822 {l} und der verwendete Kraftstoff besitzt eine Dichte von $\rho_{Kraftst}$ = 0,72 {kg/l}. Damit lässt sich mit Gleichung 2.Y die maximale Kraftstoffmasse berechnen und mit den gegebenen Volumina zu Versuchsstart und -ende auf die dort vorliegende Kraftstoffmasse schließen.
+\noindent Wie in Gleichung 2.X zu erkennen ist, setzt sich die Gesamtmasse des Flugzeugs aus der Rüstmasse, der Besatzungsmasse und der aktuellen Treibstoffmasse zusammen. Die Rüst- und Besatzungsmasse bleiben über den Flug konstant, lediglich die Kraftstoffmasse verringert sich auf Grund des Verbrauchs. Wir wissen, dass der Tank bei Versuchsstart zu 70\% und bei Versuchsende zu 50\% gefüllt ist. Das maximale Tankvolumen entspricht 822 {l} und der verwendete Kraftstoff besitzt eine Dichte von $\rho_{Kraftst}$ = 0,72 {kg/l}. Damit lässt sich mit Gleichung 2.Y die maximale Kraftstoffmasse berechnen und mit den gegebenen Volumina zu Versuchsstart und -ende auf die dort vorliegende Kraftstoffmasse schließen.
 \\
 Da wir durch den eigens durchgeführten Versuch mit der Do 128-6 den Kraftstoffverbrauch pro Sinkflug aufgezeichnet haben und die Triebwerke soviel Schub erzeugen, dass sie den Propellerwiderstand ausgleichen, können wir übertragen auf die Do 28 nicht davon ausgehen, dass während der Sinkflüge kein Kraftstoff verbraucht wird. Aufgrund fehlender Verbrauchsdaten der Do 28 im Sink- und Steigflug nehmen wir wegen der großen Ähnlichkeit beider Flugzeuge (vergleichbarer Propellerwiderstand) an, dass die Do 28 in etwa den gleichen Kraftstoffverbrauch im Sinkflug hat, wie die Do 128-6.
 \\
 Wir können also den mittleren Kraftstoffverbrauch im Sinkflug ermitteln, indem wir die verbrauchte Kraftstoffmasse durch die Summe der Zeit, die jeder Sinkflug in Anspruch genommen hat, teilen. Entsprechende Daten erhalten wir aus Tabelle \ref{tab:messergebnisse} und somit ergibt sich folgender gemittelte Kraftstoffverbrauch im Sinkflug.
 
 \begin{equation}
-	\dot{m}_{Kraftst,sink} = \frac{3,21kg + 2,73kg + 1,81kg + 0,91kg}{98 s + 68 s + 48 s + 31 s} = 0,035 \; {kg/s}
+	\dot{m}_{Kraftst,sink} = \frac{3,21\,kg + 2,73\,kg + 1,81\,kg + 0,91\,kg}{98\, s + 68 \,s + 48 \,s + 31 \,s} = 0,035 \, {kg/s}
 \end{equation}
 \\
-Um nun auf den Kraftstoffverbrauch im Steigflug zu schließen, müssen wir den Kraftstoffverbrauch im Sinkflug mit der Zeit aller Sinkflüge multiplizieren und anschließend von der insgesamt verbrauchten Kraftstoffmasse subtrahieren. Anschließend wird analog die übrig gebliebene Kraftstoffmasse durch die Zeit aller Steigflüge (Tabelle \ref{tab:do28-deltat}) dividiert und es ergibt sich der mittlere Kraftstoffverbrauch im Steigflug von $\dot{m}_{Kraftst,steig} = 0,101 \; {kg/s}$. Der Verbrauch im Flug wird somit vereinfacht abhängig von zwei Flugzuständen (Steigflug oder Sinkflug) beschrieben.\\\\
+Um nun auf den Kraftstoffverbrauch im Steigflug zu schließen, müssen wir den Kraftstoffverbrauch im Sinkflug mit der Zeit aller Sinkflüge multiplizieren und anschließend von der insgesamt verbrauchten Kraftstoffmasse subtrahieren. Anschließend wird analog die übrig gebliebene Kraftstoffmasse durch die Zeit aller Steigflüge (Tabelle \ref{tab:do28-deltat}) dividiert und es ergibt sich der mittlere Kraftstoffverbrauch im Steigflug von $\dot{m}_{Kraftst,steig} = 0,101 \, {kg/s}$. Der Verbrauch im Flug wird somit vereinfacht abhängig von zwei Flugzuständen (Steigflug oder Sinkflug) beschrieben.\\\\
 Im folgenden dient eine Beispielrechnung für den ersten und zweiten Sinkflug dazu, den Rechenweg nachzuvollziehen, um die gesamt Flugzeugmasse während der Flugabschnitte zu ermitteln.
 \\
 
@@ -65,43 +61,43 @@ m_{1,Start} = m_{Ruest} + m_{Besatzung} + m_{Kraftst,Start}
 \end{equation*}
 
 \begin{equation*}
-m_{1,Start} = 2936 \; {kg} + 346 \; {kg} +414 \; {kg} = 3696 \; {kg}
+m_{1,Start} = 2936 \, {kg} + 346 \, {kg} +414 \, {kg} = 3696 \, {kg}
 \end{equation*}
 \\
 
 \begin{equation*}
-m_{1,Ende} = m_{1,Start} - (\dot{m}_{Kraftst,sink} \cdot \ \Delta t_1)
+m_{1,Ende} = m_{1,Start} - (\dot{m}_{Kraftst,sink} \cdot \Delta t_1)
 \end{equation*}
 
 \begin{equation*}
-m_{1,Ende} = m_{1,Start} - (0,035 \; {kg/s} \cdot 240 \; {s}) = 3696 \; {kg} - 8,4 \; {kg} = 3687,6 \; {kg} \thickapprox 3688 \; {kg}
+m_{1,Ende} = m_{1,Start} - (0,035 \, {kg/s} \cdot 240 \, {s}) = 3696 \, {kg} - 8,4 \, {kg} = 3687,6 \, {kg} \thickapprox 3688 \, {kg}
 \end{equation*} \\
 
 \begin{equation*}
-m_{1,Mittelwert} = \frac{m_{1,Start} + m_{1,Ende}}{2} = 3691,8 \; {kg} \thickapprox 3692 \; {kg}
+m_{1,Mittelwert} = \frac{m_{1,Start} + m_{1,Ende}}{2} = 3691,8 \, {kg} \thickapprox 3692 \, {kg}
 \end{equation*}
 
 \vspace{5mm}
 \underline{2. Sinkflug:}
 
 \begin{equation*}
-m_{2,Start} = m_{1,Ende} - (\dot{m}_{Kraftst,steig} \cdot \ \Delta t_{1-2})
+m_{2,Start} = m_{1,Ende} - (\dot{m}_{Kraftst,steig} \cdot \Delta t_{1-2})
 \end{equation*}
 
 \begin{equation*}
-m_{2,Start} = m_{1,Ende} - (0,101 \; {kg/s} \cdot 300 \; {s}) = 3687,6 \; {kg} - 30,3 \; {kg} = 3657,3 \; {kg} \thickapprox 3657 \; {kg}
+m_{2,Start} = m_{1,Ende} - (0,101 \, {kg/s} \cdot 300 \, {s}) = 3687,6 \, {kg} - 30,3 \, {kg} = 3657,3 \, {kg} \thickapprox 3657 \, {kg}
 \end{equation*} \\
 
 \begin{equation*}
-m_{2,Ende} = m_{2,Start} - (\dot{m}_{Kraftst,Sinkflug} \cdot \ \Delta t_2)
+m_{2,Ende} = m_{2,Start} - (\dot{m}_{Kraftst,Sinkflug} \cdot \Delta t_2)
 \end{equation*}
 
 \begin{equation*}
-m_{2,Ende} = m_{2,Start} - (0,035 \; {kg/s} \cdot 320 \; {s}) = 3657,3 \; {kg} - 11,2 \; {kg} = 3646,1 \; {kg} \thickapprox 3646 \; {kg}
+m_{2,Ende} = m_{2,Start} - (0,035 \, {kg/s} \cdot 320 \, {s}) = 3657,3 \, {kg} - 11,2 \, {kg} = 3646,1 \, {kg} \thickapprox 3646 \, {kg}
 \end{equation*} \\
 
 \begin{equation*}
-m_{2,Mittelwert} = \frac{m_{2,Start} + m_{2,Ende}}{2} = 3651,5 \; {kg} \thickapprox 3652 \; {kg}
+m_{2,Mittelwert} = \frac{m_{2,Start} + m_{2,Ende}}{2} = 3651,5 \, {kg} \thickapprox 3652 \, {kg}
 \end{equation*} \\
 
 \noindent Da es sich bei diesen Rechnungen um eine Massenabschätzung handelt, runden wir die Gewichte auf ganze Zahlen. Es ist klar, dass durch diese Abschätzungen eine gewisse Toleranz vorliegt, in der sich das Flugzeuggewicht befindet. Auch ist es nicht klar, ob die Annahmen der Mittlungen der Verbräuche, sowie des gleichen Kraftstoffverbrauchs im Sinkflug angemessen sind. Die Ergebnisse der Flugzeugmassen in den einzelnen Sinkflügen sind in nachstehender Tabelle dargestellt.\\
@@ -111,10 +107,10 @@ m_{2,Mittelwert} = \frac{m_{2,Start} + m_{2,Ende}}{2} = 3651,5 \; {kg} \thickapp
 	\begin{tabular}{|c|c|c|c|}
 		\hline
 		\textbf{Sinkflug} & \textbf{$m_{Start}$} & \textbf{$m_{Ende}$} & \textbf{$m_{Mittelwert}$} \\ \hline
-		1.	& 3696 kg	& 3688 kg & 3692 kg    \\ \hline
-		2.	& 3657 kg   & 3646 kg & 3652 kg    \\ \hline
-		3.	& 3616 kg	& 3606 kg & 3611 kg	   \\ \hline
-		4.  & 3582 kg	& 3578 kg & 3580 kg    \\ \hline
+		1.	& 3696 $kg$	& 3688 $kg$ & 3692 $kg$    \\ \hline
+		2.	& 3657 $kg$   & 3646 $kg$ & 3652 $kg$    \\ \hline
+		3.	& 3616 $kg$	& 3606 $kg$ & 3611 $kg$	   \\ \hline
+		4.  & 3582 $kg$	& 3578 $kg$ & 3580 $kg$    \\ \hline
 	
 		
 		

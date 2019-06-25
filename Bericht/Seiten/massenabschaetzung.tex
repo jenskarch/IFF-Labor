@@ -1,5 +1,7 @@
-\chapter{Massenabschätzung (Do 28)}
+\chapter{Massenabschätzung}
 \label{chapter:masse}
+
+\section{Do 28 (Messchriebe)}
 Neben den Messdaten aus unserem Flugversuch, liegen uns auch Messreihen aus einem anderen Flugversuch mit einer Dornier Aircraft Do 28 vor. Auch diese genaueren Messwerte wollen wir zur Analyse nutzen. Vorerst muss jedoch die Masse des Flugzeugs aus diesem Versuch in seinen einzelnen Flugphasen abgeschätzt werden. Dazu stehen uns folgende Daten zur Verfügung. \\
 
 \begin{table}[h]
@@ -110,13 +112,48 @@ m_{2,Mittelwert} = \frac{m_{2,Start} + m_{2,Ende}}{2} = 3651,5 \, {kg} \thickapp
 		1.	& 3696 $kg$	& 3688 $kg$ & 3692 $kg$    \\ \hline
 		2.	& 3657 $kg$   & 3646 $kg$ & 3652 $kg$    \\ \hline
 		3.	& 3616 $kg$	& 3606 $kg$ & 3611 $kg$	   \\ \hline
-		4.  & 3582 $kg$	& 3578 $kg$ & 3580 $kg$    \\ \hline
-	
-		
-		
+		4.  & 3582 $kg$	& 3578 $kg$ & 3580 $kg$    \\ \hline	
 	\end{tabular}
 	\caption{Flugzeugmassen Do 28 bei den jeweiligen Sinkflügen}
 \end{table}
 
+\vspace{10mm}
+\section{Do 128-6 (eigener Flugversuch)}
+Sehr ähnlich kann mit der Do 128-6 in unserem eigenen Flugversuch verfahren werden. Hierbei stehen uns jedoch Verbrauchswerte aus einem Verbrauchszähler (seit Triebwerksstart) zur Verfügung, die in Tabelle \ref{tab:messergebnisse} zu finden sind. Dadurch erleichtert sich die Abschätzung sehr, da immer nur der aktuelle Verbrauchswert von der Startgesamtmasse subtrahiert werden muss. Dabei sollte jedoch beachtet werden, dass die in der Tabelle angegebenen Gewichte in Pfund notiert sind. Es ist vor der Auswertung also eine Umrechnung in das Kilogramm nötig, wozu folgende Umrechnungsformel genutzt wird.
 
+
+\begin{equation}
+m_{kg} = \frac{m_{lbs}}{2,205}
+\end{equation}
+
+\vspace{5mm}
+Es ergeben sich für die Do 128-6 somit folgende Verbrauchsmassen.
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Sinkflug}} & \textbf{Verbrauch (Start)} & \textbf{Verbrauch (Ende)} \\ \hline
+		1. & 37,6 kg                                        & 40,8 kg                                       \\ \hline
+		2. & 48,5 kg                                        & 51,2 kg                                       \\ \hline
+		3. & 59,0 kg                                        & 60,8 kg                                       \\ \hline
+		4. & 67,1 kg                                        & 68,0 kg                                       \\ \hline
+	\end{tabular}
+\end{table}
+
+\vspace{10mm}
+\noindent Für die Berechnung ist nun noch eine anfängliche Gesamtmasse nötig, welche sich aus der Rüstmasse (3188 kg), der Besatzungsmasse (427 kg) und der anfänglichen Kraftstoffmasse (2x 440 lbs Haupttank \& 2x 406 lbs Außentanks ergeben 767 kg) zu einer Gesamtmasse von \textbf{4382 kg} errechnet. Die folgenden Massen im Flug lassen sich dann leicht bestimmen.\\
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		\textbf{Sinkflug} & \textbf{$m_{Start}$} & \textbf{$m_{Ende}$} & \textbf{$m_{Mittelwert}$} \\ \hline
+		1.	& 4344,9 $kg$	& 4341,7 $kg$ & 4343,3 $kg$    \\ \hline
+		2.	& 4334,0 $kg$   & 4331,3 $kg$ & 4332,7 $kg$    \\ \hline
+		3.	& 4323,5 $kg$	& 4321,7 $kg$ & 4322,6 $kg$	   \\ \hline
+		4.  & 4315,4 $kg$	& 4314,5 $kg$ & 4315,0 $kg$    \\ \hline	
+	\end{tabular}
+	\caption{Flugzeugmassen Do 128 bei den jeweiligen Sinkflügen}
+\end{table}
 \newpage

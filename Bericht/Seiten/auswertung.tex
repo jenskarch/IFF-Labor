@@ -2,19 +2,36 @@
 \label{chapter:auswertung}
 
 \section{Do 128-6 (eigener Flugversuch)}
-Die bei dem Versuch abgelesene Daten ($T_{real}$ in °$C$, $H_{INA}$ in $ft$, $V_{IAS}$ in $kn$) müssen vor der Analyse in SI Basiseinheiten (°$C  \rightarrow K$, $ft \rightarrow m$, $kn \rightarrow m/s$) umgerechnet werden. In Tab. \ref{tab:umrechnung_einheiten} sind diese Umrechnungen aufgeführt.
+Wie die Treibstoffmasse müssen auch die anderen abgelesene Daten ($T_{real}$ in °$C$, $H_{INA}$ in $ft$, $V_{IAS}$ in $kn$) vor der Analyse in SI Basiseinheiten (°$C  \rightarrow K$, $ft \rightarrow m$, $kn \rightarrow m/s$) umgerechnet werden. In Tab. \ref{tab:umrechnung_einheiten} sind diese Umrechnungen aufgeführt.\\
+
 \begin{table}[h]
 	\centering
 	\begin{tabular}{l l}
 		\hline
-		Höhe & $1$ $ft=0,3048\,m$ \\
-		Geschwindigkeit&   $1\,kn=0,51\,m/s$\\
-		Temperatur &  $t\,^\circ C=t\frac{K}{^\circ C}+273,15\,K$\\
+		Höhe 			& $1$ $ft = 0,3048\,m$ 								\\
+		Geschwindigkeit	&   $1\,kn = 0,51\,m/s$								\\
+		Temperatur 		&  $t\,^\circ C = t\frac{K}{^\circ C}+273,15\,K$	\\
 		\hline		
 	\end{tabular}
 	\caption{Umrechnungstabelle auf SI Basiseinheiten} \label{tab:umrechnung_einheiten}
-\end{table} \\
-Da, bedingt durch das Wetter, am Versuchstag keine Standardatmosphärenbedingungen herrschten, muss die in Kapitel 2 hergeleitete Formel \ref{eq:wg_real} verwendet werden, um die wahre Sinkgeschwindigkeit $w_{g,real}$ für die einzelnen Sinkflüge bestimmen zu können. Dazu ist eine berechnete theoretische Temperatur aus der Normatmosphäre nötig, nämlich die Temperatur, welche laut Normatmosphäre bei Standardatmosphärenbedingungen in der jeweiligen Höhe herrschen würde. Beispielhaft sei hier die Rechnung für den ersten Sinkflug gegeben:\\
+\end{table}
+
+\noindent Die in Tabelle \ref{tab:messergebnisse} angegebenen Messergebnisse lauten mit diesen Umrechnungen wie folgt (Hinweis: Aufgrund der ohnehin recht ungenauen Temperaturmessung, wurde statt der 273,15 K der Einfachheit halber mit 273 K umgerechnet).
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		& \multicolumn{1}{l|}{\textbf{$V_{IAS}$}} & \multicolumn{1}{l|}{\textbf{$\Delta t$}} & \multicolumn{1}{l|}{\textbf{$T_{real,start}$}} & \multicolumn{1}{l|}{\textbf{$T_{real,ende}$}} \\ \hline
+		1 & 40,8 m/s         & 98 s         & 285,0 K         & 287,5 K    \\ \hline
+		2 & 51,0 m/s         & 68 s         & 285,0 K         & 288,0 K    \\ \hline
+		3 & 61,2 m/s         & 48 s         & 286,0 K         & 289,0 K    \\ \hline
+		4 & 71,4 m/s         & 31 s         & 286,0 K         & 288,0 K    \\ \hline
+	\end{tabular}
+	\caption{Do 128-6 Messergebnisse in SI-Einheiten} \label{tab:messergebnisse-si}
+\end{table}
+
+\noindent Da, bedingt durch das Wetter, am Versuchstag keine Standardatmosphärenbedingungen herrschten, muss die in Kapitel 2 hergeleitete Formel \ref{eq:wg_real} verwendet werden, um die wahre Sinkgeschwindigkeit $w_{g,real}$ für die einzelnen Sinkflüge bestimmen zu können. Dazu ist eine berechnete theoretische Temperatur aus der Normatmosphäre nötig, nämlich die Temperatur, welche laut Normatmosphäre bei Standardatmosphärenbedingungen in der jeweiligen Höhe herrschen würde $T_{INA}$. Weiterhin muss auch das Höhenintervall zwischen 2500 ft und 1500 ft in Metern umgerechnet werden und man erhält ein $\Delta H_{INA}$ von 304,8 m. Beispielhaft sei hier nun die Rechnung für $w_g$ am ersten Sinkflug gegeben:\\
 
 \underline{Beispiel: 1. Sinkflug}
 
@@ -28,11 +45,12 @@ T_{INA}(1500m) = 288,15\,K - 0,0065 \frac{K}{m} \cdot 1500\,m = 278,4\,K
 T_{INA,mittel} = \frac{271,9\,K + 278,4\,K}{2} = 275,15\,K
 \end{equation}
 \begin{equation}
-T_{real,mittel} = \frac{12\,^\circ C + 14,5\,^\circ C}{2} = 13,25\,^\circ C =	286,4\,K
+T_{real,mittel} = \frac{285,0 K + 287,5 K}{2} =	286,25\,K
 \end{equation}
 \begin{equation}
-w_{g,real} = \frac{-304,8\,m}{98\,s} \cdot \frac{286,4\,K}{275,15\,K} = - 3,24\,m/s
+w_{g,real} = \frac{-304,8\,m}{98\,s} \cdot \frac{286,25\,K}{275,15\,K} = - 3,24\,m/s
 \end{equation}
+
 
 
 \section{Do 28 (Messchriebe)}

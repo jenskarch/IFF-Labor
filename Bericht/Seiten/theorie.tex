@@ -36,7 +36,7 @@ p=p_0\biggl[1-0,0065\, \frac{K}{m} \cdot \frac{1}{288,15\,K} \cdot H\biggr]^{5,2
 \varrho = \varrho_0 \biggl[1-0,0065 \,\frac{K}{m} \cdot \frac{1}{288,15\,K} \cdot H\biggr]^{4,256}
 \end{equation}
 \section{Stationärer Gleitflug}
-Der Grundsatz des stationären Fluges ist, dass die am Flugzeug angreifenden Kräfte im Gleichgewicht stehen und somit das Flugzeug weder beschleunigt noch verzögert. Bei dem Gleitflug kommt hinzu, dass die Schubkraft gleich null ist.
+Der Grundsatz des stationären Fluges ist, dass die am Flugzeug angreifenden Kräfte im Gleichgewicht stehen und somit das Flugzeug weder beschleunigt noch verzögert. Bei dem Gleitflug kommt hinzu, dass die Schubkraft gleich null ist.\\\\
 \subsection{Widerstand und Auftrieb}
 Das Kräftegleichgewicht mit den zuvor getroffenen Annahmen liefert:
 \begin{equation}
@@ -52,12 +52,13 @@ A - mg \cdot cos(\gamma) = 0
 \end{equation}
 Abbildung \ref{figure:luftkraefte} verdeutlicht diese Zusammenhänge. \\  \\
 Für spätere Berechnungen sind die Widerstands- sowie Auftriebsbeiwerte wesentlich wichtiger als die absoluten Werte.
-\begin{equation}
+\begin{equation} \label{eq:c_w}
 C_W = \frac{-mg \cdot sin(\gamma)}{0,5  \cdot  \varrho  \cdot  S  \cdot  V^2}
 \end{equation}
-\begin{equation}
+\begin{equation} \label{eq:c_a}
 C_A = \frac{mg \cdot cos(\gamma)}{0,5  \cdot  \varrho  \cdot  S  \cdot  V^2}
 \end{equation}
+\vspace{10mm}
 \subsection{Bahnwinkel und Gleitzahl}
 Der nach oben hin positiv definierte Bahnwinkel $\gamma$ ergibt sich aus dem Kräftegleichgewicht zu:
 \begin{equation}
@@ -97,6 +98,7 @@ Gl. \ref{eq:roh_real} in Gl. \ref{eq:VTAS} ergibt:
 V_{TAS}=V_{IAS} \sqrt{\frac{\varrho_0}{\varrho_{INA}} \cdot \frac{T_{real}}{T_{INA}}}
 \end{equation}
 \nomenclature[AS]{$S$}{Flügelfläche}{[$m^2$]}{}%
+\vspace{10mm}
 \subsection{Höhendifferenz und Sinkgeschwindigkeit}
 Da bei dem Testflug der Höhenmesser auf Standardatmosphäre eingestellt war, muss die angezeigte Höhe zuerst in die reale Höhe umgerechnet werden.
 \begin{equation} \label{eq:deltaH_real}

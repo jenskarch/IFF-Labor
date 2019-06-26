@@ -34,82 +34,81 @@ Wie die Treibstoffmasse müssen auch die anderen abgelesene Daten ($T_{real}$ in
 \noindent Da, bedingt durch das Wetter, am Versuchstag keine Standardatmosphärenbedingungen herrschten, muss die in Kapitel 2 hergeleitete Formel \ref{eq:wg_real} verwendet werden, um die wahre Sinkgeschwindigkeit $w_{g,real}$ für die einzelnen Sinkflüge bestimmen zu können. Dazu ist eine berechnete theoretische Temperatur aus der Normatmosphäre nötig, nämlich die Temperatur, welche laut Normatmosphäre bei Standardatmosphärenbedingungen in der jeweiligen Höhe herrschen würde $T_{INA}$. Weiterhin muss auch das Höhenintervall zwischen 2500 ft und 1500 ft in Metern umgerechnet werden und man erhält ein $\Delta H_{INA}$ von 304,8 m. Beispielhaft sei im folgenden die Leistungsdaten Berechnung für Sinkflug 1 demonstriert:\\
 
 \noindent 
-\underline{Wahre Sinkgeschwindigkeit bestimmen}
+\underline{Wahre Sinkgeschwindigkeit nach Gleichung \ref{eq:wg_real} bestimmen}
 
-\begin{equation}
+\begin{equation*}
 T_{INA}(2500m) = 288,15\,K - 0,0065 \frac{K}{m} \cdot 2500\,m = 271,9\,K
-\end{equation}
-\begin{equation}
+\end{equation*}
+\begin{equation*}
 T_{INA}(1500m) = 288,15\,K - 0,0065 \frac{K}{m} \cdot 1500\,m = 278,4\,K
-\end{equation}
-\begin{equation}
+\end{equation*}
+\begin{equation*}
 T_{INA,mittel} = \frac{271,9\,K + 278,4\,K}{2} = 275,15\,K
-\end{equation}
-\begin{equation}
+\end{equation*}
+\begin{equation*}
 T_{real,m} = \frac{285,0 K + 287,5 K}{2} =	286,25\,K
-\end{equation}
-\begin{equation}
+\end{equation*}
+\begin{equation*}
 w_{g,real} = \frac{-304,8\,m}{98\,s} \cdot \frac{286,25\,K}{275,15\,K} = - 3,24\,m/s
-\end{equation}
+\end{equation*}
 
-% TODO Formeln aus THEORIE Teil referenzieren
 \vspace{5mm}
-\noindent Neben der realen Sinkgeschwindigkeit muss auch die angzeigte Geschwindigkeit $V_{IAS}$ in die wahre Geschwindigkeit $V_{TAS}$ umgerechnet werden.\\
+\noindent Neben der realen Sinkgeschwindigkeit muss auch die angezeigte Geschwindigkeit $V_{IAS}$ in die wahre Geschwindigkeit $V_{TAS}$ umgerechnet werden (Gleichung \ref{eq:VTAS} ).\\
 
 
 \noindent
 \underline{Wahre Geschwindigkeit bestimmen}
 
-\begin{equation}
+\begin{equation*}
 \rho_{INA}(2500ft) = \rho_0 * (1-0,065\cdot \frac{H}{T_0})^{4,256} = 1,225 kg/m^3 * (1-0,0065\cdot \frac{762 m}{288,15 K})^{4,256}
-\end{equation}
-\begin{equation}
+\end{equation*}
+\begin{equation*}
 \rho_{INA}(2500ft) = 1,1378 kg/m^3
-\end{equation}
-\begin{equation}
+\end{equation*}
+\begin{equation*}
 \rho_{INA}(1500ft) = 1,1721 kg/m^3
-\end{equation}
-\begin{equation}
+\end{equation*}
+\begin{equation*}
 \rho_{INA,mittel} = \frac{1,1721 kg/m^3+1,1378 kg/m^3}{2} = 1,15495 kg/m^3
-\end{equation}
+\end{equation*}
 
 \vspace{5mm}
 
-\begin{equation}
+\begin{equation*}
 \rho_{real} = \rho_{INA,mittel} * \frac{T_{INA}}{T_{real}} = 1,11 kg/m^3
-\end{equation}
+\end{equation*}
 
 \vspace{5mm}
 
-\begin{equation}
+\begin{equation*}
 V_{TAS} = V_{IAS}\sqrt{\frac{\rho_0}{\rho_{real}}} =42,86 m/s
-\end{equation}
+\end{equation*}
 
 
 \vspace{5mm} \noindent
 \underline{Luftkräfte und Beiwerte bestimmen}
 
-\noindent Nun wird aus der wahren Sinkgeschwindigkeit noch der Längsneigungswinkel $\gamma$ mit $\gamma = arcsin(-w_g/V_{TAS})$ zu 4,33° bestimmt, sodass letztlich die Luftkräfte ausgerechnet werden können:
+\noindent Nun wird aus der wahren Sinkgeschwindigkeit noch der Längsneigungswinkel $\gamma$ mit $\gamma = arcsin(-w_g/V_{TAS})$ zu 4,33° bestimmt, sodass letztlich die Luftkräfte nach Gleichung \ref{eq:kräftegleichgewichtAuftrieb} \& \ref{eq:kräftegleichgewichtWiderstand} ausgerechnet werden können:
 
-\begin{equation}
+\begin{equation*}
 W = - m\cdot g \cdot sin(\gamma) = -3216.76 N
-\end{equation}
-\begin{equation}
+\end{equation*}
+\begin{equation*}
 A = m\cdot g \cdot cos(\gamma) = 42486.17 N
-\end{equation}
+\end{equation*}
 
 \vspace{5mm} \noindent
-Und aus den Kräften zum Schluss die aerodynamischen Beiwerte unter Nutzung der Flügelfläche S aus Tabelle \ref{tab:do128}.
+Und aus den Kräften zum Schluss die aerodynamischen Beiwerte (Gleichung \ref{eq:c_w} \& \ref{eq:c_a} ) unter Nutzung der Flügelfläche S aus Tabelle \ref{tab:do128}.
 
-\begin{equation}
-C_W = \frac{2*W*T_real}{\rho_{INA} * T_{INA} * V_{TAS}^2 * S} = 0,10879
-\end{equation}
-\begin{equation}
-C_A = \frac{2*A*T_real}{\rho_{INA} * T_{INA} * V_{TAS}^2 * S} = 1,43689
-\end{equation}
+\begin{equation*}
+C_W = \frac{2*W*T_{real}}{\rho_{INA} * T_{INA} * V_{TAS}^2 * S} = 0,10879
+\end{equation*}
+\begin{equation*}
+C_A = \frac{2*A*T_{real}}{\rho_{INA} * T_{INA} * V_{TAS}^2 * S} = 1,43689
+\end{equation*}
 
 \vspace{5mm} \noindent
-Die Ergebnisse für alle Sinkflüge sind in folgenden Tabellen einsehbar.
+Die Ergebnisse für alle Sinkflüge sind in folgenden Tabellen einsehbar. Eine graphische Auswertung ist ebenfalls im folgenden Kapitel \ref{chapter:darstellung} zu finden.\\
 
 \begin{table}[h]
 	\centering

@@ -41,10 +41,9 @@ C_A(\alpha) = C_{A\alpha}(\alpha - \alpha_0)=C_{A\alpha}\alpha - \alpha_0 C_{A\a
 \vspace{3mm} \noindent
 Die übrigen zwei Parameter können so durch die Information dass es sich beim Nullauftriebsanstellwinkel $\alpha_0$ um den Nullpunkt von Gleichung \ref{eq:versuch_ca} handelt, sowie durch Koeffizientenvergleich dieser Gleichung mit der aus der Theorie bekannten Gleichung \ref{eq:theorie_ca}, ermittelt werden. Es ergibt sich:\\
 
-\begin{itemize}
-	\item $\alpha_0=-1.82 ^\circ$
-	\item $C_{A\alpha}= 0,11$
-\end{itemize}
+\begin{equation*}
+	\alpha_0=-1.82 ^\circ \,\, \& \,\, C_{A\alpha}= 0,11
+\end{equation*}
 
 \vspace{5mm} \noindent
 
@@ -54,29 +53,99 @@ Es wurden insgesamt zwei LILIENTHAL-Polare erstellt. Einmal für das Versuchsflu
 Für die Do 128-6 standen vier Messpunkte zur Verfügung um einen quadratischen Verlauf zu approximieren.\\
 
 \begin{equation}
-C_W=-164C_{A}^2+48,7C_A-1,9
+C_W=0,0228 C_A^2 + 0,0041 C_A^2+ 0,056
 \end{equation}
 
 \vspace{3mm} \noindent
-Aus dieser Polarengleichung lassen sich diverse charakteristische Leistungsgrößen eines Flugzeugs ablesen. Die Parameter $k=-164$, $b=48,7$ \& $C_{W0}=-1,9$ können direkt als Koeffizienten abgelesen werden. Weiterhin kann der Betriebspunkt des besten Gleitens bei $C_{A}^* \approx 1,4$ \& $C_{W}^* \approx 0,108$ grafisch bestimmt werden. Dazu gehört eine minimale reziproke Gleitzahl:\\
+Aus dieser Polarengleichung lassen sich diverse charakteristische Leistungsgrößen eines Flugzeugs ablesen. Die Parameter $k=0,0228$, $b=0,0041$ \& $C_{W0}=0,056$ können direkt als Koeffizienten abgelesen werden. Weiterhin kann der Betriebspunkt des besten Gleitens bei $C_{A}^* \approx 1,64$ \& $C_{W}^*\approx 0,12408$ grafisch bestit werden. Dazu gehört eine minimale reziproke Gleitzahl:\\
 
 \begin{equation}
-\epsilon_{min}=\frac{C_W^*}{C_A^*}=0,0771
+\epsilon_{min}=\frac{C_W^*}{C_A^*}=0,0775
 \end{equation}
 
 \vspace{3mm} \noindent
-Der Kehrwert dieser Zahl entspricht der besten Gleitzahl dieses Flugzeugs, welche also bei etwa \textbf{13} liegt. Aus einem Kilometer Höhe könnte das Flugzeug also theoretisch 13 km weit gleiten. Das entspricht einem Gleitwinkel von $\gamma =arctan(-C_W^*/C_A^*)=-4,4^\circ$. Moderne Segelflugzeuge besitzen eine Gleitzahl von 40 und mehr, allerdings besitzen deren Profile eine deutlich höhere aerodynamische Güte. Für ein Motorflugzeug scheint diese Gleitzahl schon durchaus realistisch zu sein, eher sogar noch zu hoch (zu gut).\\\\
+Der Kehrwert dieser Zahl entspricht der besten Gleitzahl dieses Flugzeugs, welche also bei etwa \textbf{12,9} liegt. Aus einem Kilometer Höhe könnte das Flugzeug also theoretisch 12,9 km weit gleiten. Das entspricht einem Gleitwinkel von $\gamma =arctan(-C_W^*/C_A^*)=-4,43^\circ$. Moderne Segelflugzeuge besitzen eine Gleitzahl von 40 und mehr, allerdings besitzen deren Profile eine deutlich höhere aerodynamische Güte. Für ein Motorflugzeug scheint diese Gleitzahl demnachsdurchaus realistisch, vielleicht sogar etwas zu gering, zu sein (zum Vergleich: ein kleinerer Motorflieger, die Ikarus C42, besitzt eine Gleitzahl von etwa 11 z\\\\
 Weiterhin lässt sich nun der Oswald-Faktor e bestimmen, für den jedoch vorher die Streckung $\Lambda$ des Profils nötig ist. Diese berechnet sich als Quotient von der Flügelspannweite b zum Quadrat durch die Flügelbezugsfläche S. Mit den Werten aus Tab. \ref{tab:do128} ergibt sich dann $\Lambda=8,338$. Jetzt lässt sich der Oswald-Faktor durch folgende Gleichung bestimmen.\\
 
 \begin{equation}  
-e=\frac{1}{k\pi \Lambda}=
+e=\frac{1}{k\pi \Lambda}=1,674
 \end{equation}
 
 \vspace{3mm} \noindent
+Dieser Wert kann nicht realistisch sein, da der Oswald-Faktor per Definition kleiner als eins sein muss. Möglicherweise liegt das an einer zu ungenauen Regressionskurve und dementsprechend einer Fehlbestimmung vom k-Faktor, der deutlich zu niedrig wirkt.\\\\
 
+\subsubsection{Do 28}
+Sehr analog wird mit der Do 28 umgegangen. Aus der Regressionsgleichung\\
+
+\begin{equation}
+C_W=0,1443C_{A}^2+0,1317C_A+0,1087
+\end{equation}
+
+\vspace{3mm} \noindent
+Ergeben sich folgende Ergebnisse:\\
+
+\begin{itemize}
+	\item $k=0,1443$ / $b=0,1317$ / $C_{W0}=0,1087$
+	\item $C_{A}^* \approx 0,89$ \& $C_{W}^* \approx 0,108$
+	\item $\epsilon_{min}=0,12135$ \& $\gamma =-6,9^\circ$
+	\item $\Lambda=8,036$ 
+	\item $e=0,2745$
+\end{itemize}
+
+\vspace{3mm} \noindent
+Diese Werte scheinen zumindest realistischer zu sein, aber wieder erscheint der Oswald-Faktor etwas unstimmig, da er diesmal etwas zu klein zu sein scheint. Auch hier könnte das wieder an einer ungünstigen Auswahl der Stichproben aus den Do 28 Messschrieben und einer daraus resultierenden ungenauen Regressionskurve liegen. \\\\
 
 \subsection{Widerstand über die Fluggeschwindigkeit}
+Diese Kurve beschreibt eine nach unten geöffnete Parabel im vierten Quadranten. Das bedeutet, dass eine positive Geschwindigkeit (x-Achse) zu einer negativen Widerstandskraft (y-Achse) führt. Da die Parabel nach unten geöffnet ist, existiert ein Maximum, für welchen gilt, dass die Widerstandskraft minimal wird. Um also die Parameter $V_{opt}$ (die optimale Geschwindigkeit) bei minimalem Widerstand $W_{min}$ zu finden, muss lediglich eine Extrempunkt Berechnung für die Regressionskurve durchgeführt werden.\\\\
+\underline{Do 128-6}\\\\
+\begin{equation*}
+W(V)=-2,0257V^2+161,15V-6434,1
+\end{equation*}
+\begin{equation*}
+\frac{dW}{dV}=-4,0514V+161,15\overset{!}{=}0
+\end{equation*}
+\begin{equation*}
+V_{opt}=\frac{-161,15}{-4,0514}=\underline{39,78 m/s}
+\end{equation*}
+\begin{equation*}
+W_{min}=W(V_{opt}) = \underline{-3227,54 N}
+\end{equation*}
+
+\vspace{3mm} \noindent
+\underline{Do 28 (analog)}\\\\
+\begin{equation*}
+V_{opt}=\underline{52,238 m/s}
+\end{equation*}
+\begin{equation*}
+W_{min}= \underline{-4370,5 N}
+\end{equation*}
+
+\vspace{5mm}
 \subsection{Staudruck und Fluggeschwindigkeit über dem Anstellwinkel}
+Im Diagramm für den Staudruck und die Fluggeschwindigkeit über den Anstellwinkel, Abb. \ref{abb:do28_wq_alpha}, ist gut zu erkennen, dass beide Kurven mithilfe eines quadratischen Ansatzes angenähert wurden, wobei beide Datensätze in einer nach oben geöffneten Parabel resultieren. Folgende Regressionsgleichungen wurden dabei ermittelt.\\
+
+\begin{equation*}
+V_{TAS} = 0,55\alpha^2 - 10,18 \alpha + 91,77
+\end{equation*}
+\begin{equation*}
+q = 0,36 \alpha^2 - 6,67 \alpha + 41,15
+\end{equation*}
+
+\vspace{5mm} \noindent
+Um theoretisch einen Bezug zwischen Anstellwinkel und Geschwindigkeit bzw. Staudruck zu ermitteln, kann die Auftriebsgleichung und die Grundgleichung für den Auftriebsbeiwert genutzt werden:\\
+
+\begin{equation}
+A = q \cdot C_A \cdot S \Leftrightarrow q = \frac{A}{C_A \cdot S}
+\end{equation}
+\begin{equation*}
+q = \frac{A}{C_{A\alpha}(\alpha-\alpha_0) \cdot S}
+\end{equation*}
+
+\vspace{5mm} \noindent
+Offensichtlich scheint q also antiproportional mit $\alpha$ in Beziehung zu stehen. Ersetzt man q durch $0,5\rho V^2$ lässt sich weiterhin zeigen dass V antiproportional zur Wurzel aus $\alpha$ ist. Unsere quadratische Näherung sollte in diesem kleinen Arbeitsbereich jedoch genau genug sein. Lediglich der in den Diagrammen zu erkennende leichte Anstieg von q und V ab etwa 9 $^\circ$ ist nicht realistisch. Der reale Verlauf müsste monoton fallend sein.
+
+
+
 \newpage
 
 \section{Analyse durch Philip Margenfeld}

@@ -81,7 +81,23 @@ e=\frac{1}{k\pi \Lambda}=
 
 \section{Analyse durch Philip Margenfeld}
 \subsection{Höhenruder-Trimmkurve}
+Die Höhenruder-Trimmkurve zeigt den Anstellwinkel $\alpha$ der Do 28 über den Klappenausschlag $\eta$ des Höhenruders. Dargestellt ist dies in Abbildung \ref{abb:do28_alpha_eta}. Ein negativer Klappenausschlag sorgt für ein Nickmoment um den Schwerpunkt der Do 28 führt damit zu einer Änderung des Anstellwinkels $\alpha$. Abbildung \ref{abb:do28_alpha_eta} zeigt einen linear negativen Verlauf, der sich mit der Gleichung
+\begin{equation}
+\alpha(\eta) = -2,44\eta + 2,76
+\end{equation}
+darstellen lässt. Für einen Höhenruderausschlag von 0 $^\circ$ nimmt das Flugzeug einen Anstellwinkel von 2,76 $^\circ$ an. Ein Anstellwinkel von 0 $^\circ$ lässt sich bei einem $\eta$ von 1,13 $^\circ$ erreichen. Je negativer der Höhenruderausschlag ist, desto größer wird der Anstellwinkel.
+  
 \subsection{Auftriebsbeiwert über den Anstellwinkel}
+Abbildung \ref{abb:do28_ca_alpha} zeigt den Auftriebsbeiwert $C_a$ über dem Anstellwinkel $\alpha$ der Do 28. Dieser lässt sich allgemein durch die Formel
+\begin{equation}  \label{eq:theorie_ca}
+C_A(\alpha) = C_{A\alpha}(\alpha - \alpha_0)
+\end{equation}
+beschreiben. Im Fall der Do 28 lautet die Formel
+\begin{equation}  \label{eq:versuch_ca}
+C_A(\alpha) = 0,11\alpha + 0,2
+\end{equation}.
+$\alpha_{0}$ beschreibt den Nullauftriebswinkel, den Winkel, bei dem das Flugzeug keinen Auftrieb mehr erzeugt. Dieser liegt bei der Do 28 bei $\alpha_{0}$ = -1,81 $^\circ$. $C_{A0}$ gibt den Auftriebsbeiwert an, welcher bei einem Anstellwinkel von $\alpha$ = 0 $\circ$ vorherrscht. Dieser beläuft sich bei der Do 28 auf einen Wert von $C_{A0}$ = 0,2. Die Regression verläuft für die Do 28 nur linear. In der Theorie verläuft der Auftrieb über den Anstellwinkel zunächst auch linear, bis ein Höhepunkt erreicht wird worauf der Auftrieb anschließend sinkt und kurz darauf aufgrund von ablösender Strömung zusammen bricht.  
+Dieser maximale Auftriebsbereich fehlt aufgrund von nicht vorliegenden Messdaten im Grenzbereich des Flugzeugs. 
 \subsection{LILIENTHAL-Polare}
 \subsection{Widerstand über die Fluggeschwindigkeit}
 \subsection{Staudruck und Fluggeschwindigkeit über dem Anstellwinkel}

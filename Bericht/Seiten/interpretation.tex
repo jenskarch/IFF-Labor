@@ -11,8 +11,70 @@
 
 \section{Analyse durch Jens Karch}
 \subsection{Höhenruder-Trimmkurve}
+Bei der Höhenruder-Trimmkurve in Abbildung \ref{abb:do28_alpha_eta} handelt es sich um den Anstellwinkel $\alpha$, welcher über den Höhenruderausschlag $\eta$ aufgetragen wird. Wie bei allen folgenden Plots, wurden auch von diesem nur eine Auswahl an den aus Kapitel \ref{chapter:auswertung} bekannten Ergebnissen für die graphische Auswertung heran gezogen, da einige Messpunkte unrealistische Ergebnisse liefern, welche die Regressionsqualität verschlechtern würden.\\
+Offensichtlich ergibt sich für die Regressionslinie ein linearer Verlauf, welche mit folgender Formel angenähert werden kann.\\
+
+\begin{equation}
+\alpha(\eta) = -2,44\eta + 2,76
+\end{equation} 
+
+\vspace{5mm} \noindent
+Direkt ablesbar daraus ist der Y-Achsen Schnittpunkt bei $y = 2,76$. Dieser Wert entspricht dem Anstellwinkel in Grad, der sich einstellt, wenn das Höhenruder sich in Neutralstellung befindet. Der Nullpunkt kann durch einfache Mathematik zu $x=1.13$ bestimmt werden, und beschreibt den Höhenruderausschlag in Grad, der einzustellen ist um einen Anstellwinkel von 0 $^\circ$ zu erhalten.\\
+Generell handelt es sich bei der Kurve um eine Gerade mit negativer Steigung, was bedeutet, dass ein positiver Höhenruderausschlag eine Verringerung des Anstellwinkels zur Folge hat. Diese Ergebnisse decken sich gut mit der Theorie.\\\\
+
 \subsection{Auftriebsbeiwert über den Anstellwinkel}
+Der Auftriebsbeiwert $C_A$ über den Anstellwinkel $\alpha$ (Abbildung \ref{abb:do28_ca_alpha}) wird auch ,,aufgelöste Polare`` genannt. An diesem Diagramm lässt sich ablesen wie sich der Auftrieb über den Anstellwinkel verändert, aber vor allem, ab welchem Anstellwinkel ein Strömungsabriss zu erwarten ist. Je höher der Anstellwinkel ist, desto näher kommt man dem Bereich des Strömungsabrisses. Die Kenntnis der Eigenschaften eines Flugzeugs hinsichtlich dieses kritischen Bereichs ist von äußerster Relevanz.\\
+In unserem Versuch kann diese Kurve, welche bei hohen Anstellwinkeln gewöhnlich nach unten abknickt (Strömungsabriss), allerdings nur in ihrem linearen Bereich angenähert werden, da uns nicht genügend Daten im hohen Anstellwinkelbereich zur Verfügung stehen um diesen ausreichend abbilden zu können. Dementsprechend ergibt sich der lineare Teil der aufgelösten Polare zu folgender Formel.\\
+
+\begin{equation}  \label{eq:versuch_ca}
+C_A(\alpha) = 0,11\alpha + 0,2
+\end{equation}
+
+\vspace{3mm} \noindent
+Wieder kann hier der Y-Achsen Schnittpunkt bestimmt werden zu $y=0,2$. Bei diesem Wert handelt es sich um den Auftriebsbeiwert bei keinem Anstellwinkel $C_{A0}$. \\
+Allgemein folgt die Gleichung $C_A(\alpha)$ der folgenden Form.\\
+
+\begin{equation}  \label{eq:theorie_ca}
+C_A(\alpha) = C_{A\alpha}(\alpha - \alpha_0)=C_{A\alpha}\alpha - \alpha_0 C_{A\alpha}
+\end{equation}
+
+\vspace{3mm} \noindent
+Die übrigen zwei Parameter können so durch die Information dass es sich beim Nullauftriebsanstellwinkel $\alpha_0$ um den Nullpunkt von Gleichung \ref{eq:versuch_ca} handelt, sowie durch Koeffizientenvergleich dieser Gleichung mit der aus der Theorie bekannten Gleichung \ref{eq:theorie_ca}, ermittelt werden. Es ergibt sich:\\
+
+\begin{itemize}
+	\item $\alpha_0=-1.82 ^\circ$
+	\item $C_{A\alpha}= 0,11$
+\end{itemize}
+
+\vspace{5mm} \noindent
+
 \subsection{LILIENTHAL-Polare}
+Es wurden insgesamt zwei LILIENTHAL-Polare erstellt. Einmal für das Versuchsflugzeug Do 128-6 in Abb. \ref{abb:do128_lilienthal} und einmal für die Do 28 in Abb. \ref{abb:do28_lilienthal}.\\
+\subsubsection{Do 128-6}
+Für die Do 128-6 standen vier Messpunkte zur Verfügung um einen quadratischen Verlauf zu approximieren.\\
+
+\begin{equation}
+C_W=-164C_{A}^2+48,7C_A-1,9
+\end{equation}
+
+\vspace{3mm} \noindent
+Aus dieser Polarengleichung lassen sich diverse charakteristische Leistungsgrößen eines Flugzeugs ablesen. Die Parameter $k=-164$, $b=48,7$ \& $C_{W0}=-1,9$ können direkt als Koeffizienten abgelesen werden. Weiterhin kann der Betriebspunkt des besten Gleitens bei $C_{A}^* \approx 1,4$ \& $C_{W}^* \approx 0,108$ grafisch bestimmt werden. Dazu gehört eine minimale reziproke Gleitzahl:\\
+
+\begin{equation}
+\epsilon_{min}=\frac{C_W^*}{C_A^*}=0,0771
+\end{equation}
+
+\vspace{3mm} \noindent
+Der Kehrwert dieser Zahl entspricht der besten Gleitzahl dieses Flugzeugs, welche also bei etwa \textbf{13} liegt. Aus einem Kilometer Höhe könnte das Flugzeug also theoretisch 13 km weit gleiten. Das entspricht einem Gleitwinkel von $\gamma =arctan(-C_W^*/C_A^*)=-4,4^\circ$. Moderne Segelflugzeuge besitzen eine Gleitzahl von 40 und mehr, allerdings besitzen deren Profile eine deutlich höhere aerodynamische Güte. Für ein Motorflugzeug scheint diese Gleitzahl schon durchaus realistisch zu sein, eher sogar noch zu hoch (zu gut).\\\\
+Weiterhin lässt sich nun der Oswald-Faktor e bestimmen, für den jedoch vorher die Streckung $\Lambda$ des Profils nötig ist. Diese berechnet sich als Quotient von der Flügelspannweite b zum Quadrat durch die Flügelbezugsfläche S. Mit den Werten aus Tab. \ref{tab:do128} ergibt sich dann $\Lambda=8,338$. Jetzt lässt sich der Oswald-Faktor durch folgende Gleichung bestimmen.\\
+
+\begin{equation}  
+e=\frac{1}{k\pi \Lambda}=
+\end{equation}
+
+\vspace{3mm} \noindent
+
+
 \subsection{Widerstand über die Fluggeschwindigkeit}
 \subsection{Staudruck und Fluggeschwindigkeit über dem Anstellwinkel}
 \newpage

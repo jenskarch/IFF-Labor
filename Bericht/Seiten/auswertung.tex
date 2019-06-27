@@ -1,7 +1,7 @@
 \chapter{Auswertung der Messdaten}
 \label{chapter:auswertung}
 
-\section{Do 128-6 (eigener Flugversuch)}
+\section{Do 128-6 (eigener Flugversuch)} \label{section:128}
 Wie die Treibstoffmasse müssen auch die anderen abgelesene Daten ($T_{real}$ in °$C$, $H_{INA}$ in $ft$, $V_{IAS}$ in $kn$) vor der Analyse in SI Basiseinheiten (°$C  \rightarrow K$, $ft \rightarrow m$, $kn \rightarrow m/s$) umgerechnet werden. In Tab. \ref{tab:umrechnung_einheiten} sind diese Umrechnungen aufgeführt.\\
 
 \begin{table}[h]
@@ -145,5 +145,103 @@ Die Ergebnisse für alle Sinkflüge sind in folgenden Tabellen einsehbar. Eine g
 
 \vspace{1cm}
 \section{Do 28 (Messschriebe)}
+Zur Auswertung der Sinkflüge mit der DO 28 stehen Messschriebe mit Höhe, Staudruck, Anstellwinkel sowie Höhenruderausschlag über der Zeit zur Verfügung. Außerdem liegt eine Tabelle mit der in den Sinkflügen gemessenen Höhe sowie zugehöriger Temperatur vor. Die zugehörigen Massen wurden in Kap. \ref{chapter:masse} bereits bestimmt.\\ \\
+Für die Darstellung der Höhenruder-Trimmkurve ($\alpha = f(\eta)$) wurden Stichprobenartig Punkte aus dem Messschrieb abgelesen (siehe Anhang). In Tab. \ref{tab:alphaetaDO28} sind als Beispiel die Werte des ersten Sinkfluges aufgeführt. Mithilfe der Stichproben aus den restlichen Sinkflügen kann Abb. \ref{fig:alphaetaDO28} erstellt werden. 
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|l|l|}
+		\hline
+		$\alpha [^\circ]$ & $\eta [^\circ]$ \\ \hline
+		4,00&	-0,65\\ \hline
+		4,50&	-0,65\\ \hline
+		5,00&	-0,75\\ \hline
+		5,00&	-0,75\\ \hline
+		5,00&	-0,75\\ \hline
+		4,75&	-0,75\\ \hline
+		4,75&	-0,75\\ \hline
+	\end{tabular}
+	\caption{Stichproben von Anstellwinkel und Höhenruderausschlag des 1. Sinkfluges} \label{tab:alphaetaDO28}
+\end{table}
+\vspace{1cm}
+\noindent Für die Auswertung der Restlichen Ergebnisse müssen nun folgende Werte bestimmt werden:
+
+\begin{itemize}
+	\item Widerstand
+	\item Widerstands- und Auftriebsbeiwert
+	\item Fluggeschwindigkeit
+	\item Staudruck
+	\item Anstellwinkel
+\end{itemize} 
+
+\noindent Wie zuvor erwähnt können Staudruck sowie Anstellwinkel aus dem Messschrieb abgelesen werden. Die restlichen Werte lassen sich analog zu Kap. \ref{section:128} berechnen. Folgend ist eine Beispielrechnung für den Zeitpunkt t=206s nach Beginn des ersten Sinkfluges aufgeführt. Da bei dem Versuch mit der Do 28 wesentlich mehr Messpunkte zur Verfügung stehen, wurde hier ein Zeitintervall von ca. 12~s genutzt. \\
+
+\noindent 
+\underline{Wahre Sinkgeschwindigkeit nach Gleichung \ref{eq:wg_real} bestimmen}
+
+\begin{equation*}
+T_{INA}(677\,m) = 288,15\,K - 0,0065 \frac{K}{m} \cdot 677\,m = 283,7\,K
+\end{equation*}
+\begin{equation*}
+T_{INA}(623\,m) = 288,15\,K - 0,0065 \frac{K}{m} \cdot 623\,m = 284,1\,K
+\end{equation*}
+\begin{equation*}
+T_{INA,mittel} = \frac{283,7\,K + 284,1\,K}{2} = 283,9\,K
+\end{equation*}
+\begin{equation*}
+T_{real,mittel} = \frac{280,5 K + 280,2 K}{2} =	280,35\,K
+\end{equation*}
+\begin{equation*}
+w_{g,real} = \frac{-54\,m}{12\,s} \cdot \frac{280,35\,K}{283,9\,K} = - 3,24\,m/s
+\end{equation*}
+
+\vspace{5mm}
+
+
+\noindent
+\underline{Wahre Geschwindigkeit nach Gleichung \ref{eq:vüberq} bestimmen}
+\begin{equation*}
+\varrho_{INA}(677\,m) = 1,14734\,\frac{kg}{m^3}
+\end{equation*}
+\begin{equation*}
+\varrho_{INA}(623\,m) = 1,15339\,\frac{kg}{m^3}
+\end{equation*}
+\begin{equation*}
+\varrho_{INA,mittel} = \frac{1,14734\frac{kg}{m^3} + 1,15339\,\frac{kg}{m^3}}{2} = 1,15037\,\frac{kg}{m^3}
+\end{equation*}
+\begin{equation*}
+\rho_{real} = \rho_{INA,mittel} * \frac{T_{INA,mittel}}{T_{real,mittel}} = 1,16493\,\frac{kg}{m^3}
+\end{equation*}
+\vspace{5mm}
+\begin{equation*}
+V_{TAS} = \sqrt{\frac{2 \cdot 1650\,Pa}{1,16493\,\frac{kg}{m^3}}} = 53,1 \,\frac{m}{s}
+\end{equation*}
+\newpage 
+\noindent
+\underline{Luftkräfte und Beiwerte bestimmen}
+
+\noindent Mithilfe der wahren Sinkgeschwindigkeit und der Fluggeschwindigkeit lässt sich der Längsneigungswinkel $\gamma$ mit $\gamma = arcsin(-w_g/V_{TAS})$ zu 3,5° bestimmen, sodass letztlich die Luftkräfte nach Gleichung \ref{eq:kräftegleichgewichtAuftrieb} \& \ref{eq:kräftegleichgewichtWiderstand} ausgerechnet werden können:
+
+\begin{equation*}
+W = - m\cdot g \cdot sin(\gamma) = -2208,23\,N
+\end{equation*}
+\begin{equation*}
+A = m\cdot g \cdot cos(\gamma) = 36123,06\,N
+\end{equation*}
+
+\vspace{5mm} \noindent
+Unter Nutzung der Flügelfläche $S = 28\,m^2$  lassen sich die aerodynamischen Beiwerte (Gl. \ref{eq:c_w} \& \ref{eq:c_a}) bestimmen.
+
+\begin{equation*}
+C_W = \frac{2*W*T_{real}}{\rho_{INA} * T_{INA} * V_{TAS}^2 * S} = 0,04802
+\end{equation*}
+\begin{equation*}
+C_A = \frac{2*A*T_{real}}{\rho_{INA} * T_{INA} * V_{TAS}^2 * S} = 0,78553
+\end{equation*}
+
+\vspace{5mm} 
+
+\noindent 
+Diese Rechnungen wurden nun für mehrere Stichproben des jeweiligen Sinkfluges, mithilfe eines Tabellenkalkulationsprogramm, durchgeführt. Mit Hilfe der nun bestimmten Werte lassen sich alle Diagramme aus Kap. \ref{chapter:darstellung} erstellen. Aufgrund der in Kap. \ref{chapter:theorie} aufgeführten Annahmen wurden Datenpunkte, welche stark aus dem zu erwartenden Schema fallen nicht zur Erstellung der Diagramme genutzt. 
 
 \newpage

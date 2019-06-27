@@ -291,9 +291,90 @@ Anhand der Stichproben erkennt man, dass mit einer Erhöhung des Anstellwinkels 
 
 \section{Analyse durch Wentao Wu}
 \subsection{Höhenruder-Trimmkurve}
+Das Diagramm Anstellwinkel über Höhenruderausschlag ergibt sich einen annähernd linearen Zusammenhang zwischen beiden Winkeln. Davon richtet das Diagramm Anstellwinkel eine positive Kurve und das Diagramm Höhenruderausschlag in gleicher Zeit eine negative bzw. mit Abnahme von $\eta$ nimmt $\alpha$ großenteils entsprechend zu. Mit der Gleichung wird der Zusammenhang dargestellt.
+
+\begin{equation*}
+\alpha = -2.44 \eta + 2.76
+\end{equation*}
+
+Ein möglicher Anfangswert für Anstellwinkel beim Nullhöhenruderausschlag liegt ungefähr in 2.76 Grad, das durch Abschnitte in der Y - Achse ablesen wird. Das Verlauf entspricht auch die Funktionsprinzip eines Flugzeugs, dass man durch Kontrolle des Höhenruder die Luftlaufrichtung verändert und einen Moment um den Schwerpunkt erzeugt, damit der Flugzeug in die Gegenrichtung fliegt. Also mit der Zunahme des Höhenruderausschlag in negative Richtung nimmt der Anstellwinkel auch zu. Aber viele Schwankungen sind bei zweiten, dritten und vierten Sinkflüge erkannt, da die Wirkung des Höhenruder stark von Aerodynamik abhängt und unterschiedliche Auswirkung bei gleicher Winkeleinstellung erzeugen kann. Beispielsweise erzeugt das Höhenruder bei erstem Sinkflug weniger Veränderung an Anstellwinkel als bei anderen Sinkflüge. 
+
 \subsection{Auftriebsbeiwert über den Anstellwinkel}
+Einen annähernd linearen Zusammenhang zwischen den Auftriebsbeiwert $C_{A}$ und der Anstellwinkel $\alpha$ wird aus Abbildung 6.5 erkannt bzw. der Auftriebsbeiwert nimmt mit Zunahme des Anstellwinkels zu. Den Zusammenhang kann durch die Gleichung 
+
+\begin{equation*}
+C_{A} = C_{A\alpha} \dot (\alpha-\alpha_{0})
+\end{equation*}
+
+erklärt werden. Bei einem Anstellwinkel von 0 Grad steht $C_{A0}$ für ungefähr 0.2. Und für einem Nullauftriebsbeiwert wird $\alpha_{0}$ als -2 Grad vom Abschnitt der X - Achse und Linie abgelesen. Die lineare Regression über Stichproben lautet etwa 0.11 für $C_{A\alpha}}$ für $\alpha = 4 $ Grad liegt $C_{A} = 0.65$.
+
 \subsection{LILIENTHAL-Polare}
+Die Abbildung 6.1 zeigt einen quadratischen Zusammenhang zwischen $C_{W}$ und $C_{A}$ vom $Do -128$. Vergleich mit dem Verlauf von $Do - 28$ ändert es bei $Do - 128$ viel weniger bzw. es ist ein steileres Verlauf bei $Do - 128$. Es werden von relativ niedriger Auftriebsbeiwert mit höheren Widerstandsbeiwert als bei $Do -128$ verursacht. Aber grundsätzlich verlaufen beiden Diagramme ähnlich und entsprechen die grundsätzliche Aussage. Mit ansteigenden Geschwindigkeit bzw. von erstem Versuch bis viertem Versuch ist die reziproke Zahl $\epsilon$ immer größer. Beim Sinkflüge 1 und 2 zeigt es sich schon kein deutliches Verlauf.  Besonders beim vierten Versuch liegt die reziproke Zahl genau in $\epsilon_{min}$ und bleibt in vorherigen Sinkflüge entfernter. 
+
+Noch ein interessant liegt es bei minimale reziproke Zahl, welche beim $Do - 128$ ungefähr in 0,079 deutlich niedriger als beim $D0 - 28$ in 0,12 liegt.
+
+Für Berechnung der reziproke Zahl $\epsilon$ bzw. $\epsilon_{min}$ muss man folgende Gleichung benutzen. Zuerst müssen $C_{A}^{*}$ und $C_{W}^{*}$ durch die Gleichung 
+
+\begin{equation*}
+C_{W}^{*} = 2 C_{W0}
+\end{equation*}
+\begin{equation*}
+C_{A}^{*} = \sqrt{\frac{C_{W0}}{k}}
+\end{equation*}
+
+ausgerechnet werden. Dadurch werden reziproke Zahl $\epsilon$ bzw. $\epsilon_{min}$ ermittelt.
+
+\begin{equation*}
+\epsilon_{min} = \frac{C_{W}^{*}}{C_{A}^{*}} = 0,079
+\end{equation*}
+\begin{equation*}
+\epsilon = \frac{C_{W}}{C_{A}}
+\end{equation*}
+
+Durch Umkehrung von $\epsilon_{min}$ erhält man den längste Gleitweg $12.6 km$. Mit einer weiteren Gleichung bekommt man noch den Gleitwinkel $\gamma = -4.5$ Grad.
+
+\begin{equation*}
+\gamma = arctan(-\frac{C_{W}}{C_{A}}) = arctan( -\epsilon)
+\end{equation*}
+
+In die allgemeine Gleichung des Zusammenhang zwischen $C_{A}$ und $C_{W}$ aus dem Skript  
+
+\begin{equation*}
+C_{W} = C_{W{0}} (+j \cdot $C_{A}) + k \cdot C_{A}^{2}
+\end{equation*}
+
+werden $k = 0,0228$, $j = 0,0041$ und $C_{W{0]}} = 0,0056$ eingesetzt und dadurch wird das Verlauf von messenden Daten erläutert. 
+
+Mit der gleicher Gleichung ergibt das Verlauf vom $Do - 28$ sich auch, wobei $k = 0,1443$, $j = 0,1317$ und $C_{W{0}} = 0,1087$ sind. Aus der Gleichung von $C_{A}$ und $C_{W}$ bekommt man noch die minimale reziproke Zahl $\eta_{min} = 0,12$, daraus wird $\gamma = -6.9$ Grad hergeleitet.
+
 \subsection{Widerstand über die Fluggeschwindigkeit}
+Den Zusammenhang für $Do -128$ als auch $Do - 28$ zwischen Widerstand $W$ und die wahre Geschwindigkeit $V_{TAS}$ erkennt man parabelförmig. Alle Sinkflüge liegen fast genau in der Kurve, obwohl es beim $Do -28$ relative mehrere Abweichungen abweist, dementsprechend liegt der erste, zweite Sinkflug liegt noch in der Kurve, aber der dritte und vierte Sinkflug läuft schon weg. Den Zusammenhang wird auch mit einer Gleichung erklärt.
+
+\begin{equation*}
+W = -2,0247 {V}^{2} + 161,15 V - 6434,1
+\end{equation*}
+
+In der Abbildung 6.2 erkennt man sowohl ein steileres Verlauf als beim $Do -28$ als auch die Extremwerte bzw. die optimale Geschwindigkeit $V_{opt}$ als 39.8 $m/s$ und den minimalen Widerstand $W_{min}$ als -3227 $N$. Die Extremwerte liegen beim $Do -28$ mit $V_{opt}$ von $52.2 m/s$ und $W_{min}$ von -4370 $N$.
+
 \subsection{Staudruck und Fluggeschwindigkeit über dem Anstellwinkel}
+Die wahre Geschwindigkeit $V_{TAS}$ und der Staudruck $q$ aus den Messschrieben des $Do -28$ über Anstellwinkel werden jeweils mit blauer und grüner Linien gezeichnet. Mit folgenden beiden Gleichung werden die Verläufe dargestellt.
+
+\begin{equation*}
+V_{TAS} = 0,55\alpha^2 - 10,18 \alpha + 91,77
+\end{equation*}
+\begin{equation*}
+q = 0,36 \alpha^2 - 6,67 \alpha + 41,15
+\end{equation*}
+
+Zuerst kann man erkennen, das die beide Verläufe fast identisch und nach unten gewölbt sind, wobei die Verläufe zuerst relativ schnell und dann langsamer sinkt bzw. für hohen Anstellwinkel wird nur kleine Geschwindigkeit benötigt. In zweitem Sinkflug mit relativ niedrigster Geschwindigkeit $45 m/s$ ist der Anstellwinkel mit etwa 9 Grad am größten.
+Aus der theoretischen Grundlagen bekommt man noch die Gleichung für direkten Zusammenhang zwischen Auftrieb, Geschwindigkeit und Staudruck.
+
+\begin{equation}
+q = \frac{1}{2} \cdot \rho \cdot {V}^{2} = \frac{A}{C_A \cdot S}
+\end{equation}
+\begin{equation*}
+q = \frac{1}{2} \cdot \rho \cdot {V}^{2} = \frac{A}{C_{A\alpha}(\alpha-\alpha_0) \cdot S}
+\end{equation*}
+
 \newpage
 	

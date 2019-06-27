@@ -165,7 +165,7 @@ beschreiben. Im Fall der Do 28 lautet die Formel:
 \begin{equation}  \label{eq:versuch_ca}
 C_A(\alpha) = 0,11\alpha + 0,2
 \end{equation}
-$\alpha_{0}$ beschreibt den Nullauftriebswinkel, den Winkel, bei dem das Flugzeug keinen Auftrieb mehr erzeugt. Dieser liegt bei der Do 28 bei $\alpha_{0}$ = -1,81 $^\circ$. $C_{A0}$ gibt den Auftriebsbeiwert an, welcher bei einem Anstellwinkel von $\alpha$ = 0 $\circ$ vorherrscht. Dieser beläuft sich bei der Do 28 auf einen Wert von $C_{A0}$ = 0,2. Die Regression zeigt für die Do 28 nur den linearen Abschnitt. In der Theorie verläuft der Auftrieb über den Anstellwinkel zunächst auch linear, bis ein Höhepunkt erreicht wird worauf der Auftrieb anschließend sinkt und kurz darauf aufgrund von ablösender Strömung zusammen bricht.  
+$\alpha_{0}$ beschreibt den Nullauftriebswinkel, den Winkel, bei dem das Flugzeug keinen Auftrieb mehr erzeugt. Dieser liegt bei der Do 28 bei $\alpha_{0}$ = -1,81 $^\circ$. $C_{A0}$ gibt den Auftriebsbeiwert an, welcher bei einem Anstellwinkel von $\alpha$ = 0 $^\circ$ vorherrscht. Dieser beläuft sich bei der Do 28 auf einen Wert von $C_{A0}$ = 0,2. Die Regression zeigt für die Do 28 nur den linearen Abschnitt. In der Theorie verläuft der Auftrieb über den Anstellwinkel zunächst auch linear, bis ein Höhepunkt erreicht wird worauf der Auftrieb anschließend sinkt und kurz darauf aufgrund von ablösender Strömung zusammen bricht.  
 Dieser maximale Auftriebsbereich fehlt aufgrund von nicht vorliegenden Messdaten im Grenzbereich des Flugzeugs. 
 \subsection{LILIENTHAL-Polare}
 Die Lilienthal Polare wurde sowohl für Do 128-6 (Abbildung \ref{abb:do128_lilienthal}), als auch für die Do 28 (Abbildung \ref{abb:do28_lilienthal}) erstellt. Sie zeigt den Zusammenhang zwischen Auftriebsbeiwert und Widerstandsbeiwert eines Flugzeuges über alle Flugzustände auf. 
@@ -198,6 +198,20 @@ C_W=0,1443C_{A}^2+0,1317C_A+0,1087
 Es lässt sich erkennen, dass Die Do 128-6 eine um etwa 56 \% bessere Gleitzahl hat, als die Do 28. Beide scheinen jedoch vergleichsweise niedrig. 
 Je steiler die Polare verläuft, desto besser ist Das Verhältnis von Auftrieb zu Widerstand.
 \subsection{Widerstand über die Fluggeschwindigkeit}
+Für die Do 128-6 ist in Abbildung \ref{abb:do128_wv} und für die Do 28 in Abbildung \ref{abb:do28_wv} der Widerstand über der wahren Fluggeschwindigkeit dargestellt. Die Kurve zeigt den Verlauf einer nach unten geöffnetet Parabel mit einem Maximum bei ($W_min$ / $V_opt$). Dies bedeutet, es gibt eine Geschwindigkeit, bei der Das Flugzeug einen minimalen Widerstand aufweist. Dieser minimale Widerstand liegt erstaunlicherweise nicht bei minimaler Geschwindigkeit vor, sondern bei einer leicht höheren, bis er mit weiter steigender Geschwindigkeit quadratisch zunimmt. \\
+Diese Polare lässt sich für die Do 128-6 durch 
+\begin{equation}
+W(V)=-2,0257V^2+161,15V-6434,1
+\end{equation}
+und für die Do 28 durch 
+\begin{equation}
+W(V)=-5,09V^2+531,78V-18260
+\end{equation}
+ beschreiben. Es ergeben sich für beide Flugzeuge optimale Betriebspunkte bei Do 128-6: $V_{opt}$= 39,78 $m/s$ / 
+$W_{min}$= -3227,54 $N$ und Do 28: $V_{opt}$=52,238 $m/s$ / 
+$W_{min}$= -4370,5 $N$.
+
+
 \subsection{Staudruck und Fluggeschwindigkeit über dem Anstellwinkel}
 \newpage
 

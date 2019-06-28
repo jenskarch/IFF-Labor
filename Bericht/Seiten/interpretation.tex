@@ -3,10 +3,57 @@
 
 \section{Analyse durch Marco De Gaetano}
 \subsection{Höhenruder-Trimmkurve}
+Abbildung \ref{abb:do28_alpha_eta} zeigt den Anstellwinkel $\alpha$ über dem Höhenruderausschlag $\eta$ der DO 28. Da der Anstellwinkel in diesem Fall nach unten hin positiv definiert war, ergibt sich die Höhenruder-Trimmkurve, durch lineare Regression der Strichproben, zu einer fallenden Geraden. Anhand der Regressionsformel lässt sich erkennen, dass bei Neutralstellung des Höhenruders ($\eta = 0^\circ$) der Anstellwinkel in etwa $2,75^\circ$ beträgt. Einen Anstellwinkel von $0^\circ$ lässt sich durch einen Höhenruderausschlag von $1,13^\circ$ realisieren. Je größer also der Höhenruderausschlag ist, desto größer ist auch des Anstellwinkel, was sich mit der Theorie deckt.
+\vspace{3mm}
 \subsection{Auftriebsbeiwert über den Anstellwinkel}
+In Abbildung \ref{abb:do28_ca_alpha} ist der Auftriebsbeiwert $C_A$ über dem Anstellwinkel $\alpha$ aufgetragen. Hier lässt sich ablesen, wie sich der Auftrieb in Abhängigkeit des Anstellwinkel verändert und ab welchem Anstellwinkel ein Strömungsabriss zu erwarten ist. Da der maximale Auftrieb kurz vor dem Strömungsabriss liegt und dieses Szenario nicht geflogen wurden kann man hier nur den linearen Teil der Kurve betrachten und keine Aussage über $C_{A_{max}}$ treffen. \\
+Wie auch zuvor wurde eine lineare Regression durchgeführt, welche zu einer steigenden Geraden mit einem y-Achsenabschnitt von 0,2 führt. Daran ist zu erkennen, dass bei neuralem Anstellwinkel ($\alpha=0^\circ$) der Auftriebsbeiwert $C_{A0} = 0,2$ entspricht. Durch einfaches Umstellung der Regressionsformel kann der Anstellwinkel ermittelt werden, bei dem kein Auftrieb mehr erzeugt wird. Bei $C_A=0$ entspricht dieser Winkel $\alpha_0 = -1,81^\circ$.\\
+Die Allgemeine Formel für den Auftriebsbeiwert lautet: $C_A(\alpha) = C_{A\alpha}(\alpha - \alpha_0)=C_{A\alpha}\alpha - \alpha_0 C_{A\alpha}$. Durch Koeffizientenvergleich kann der Auftriebsanstieg $C_{A\alpha} = 0,11$ ermittelt werden.
+\vspace{3mm}
 \subsection{LILIENTHAL-Polare}
+\paragraph{DO 128-6} Um die Lilienthal-Polare für die DO 128-6 zu erstellen wurde eine quadratische Regression verwendet. Vergleicht man die Regressionsformel mit der Formel aus der Theorie könne die Parameter $k=0,0228$, $b=0,0041$ \& $C_{W0}=0,056$ einfach abgelesen werden. In der Abbildung \ref{abb:do128_lilienthal} ist zusätzlich der Betriebszustand des besten Gleitens mit den Beiwerten $C_{A}^* \approx 1,64$ \& $C_{W}^*\approx 0,12408$ eingetragen.\\
+Die minimale reziproke Gleitzahl ergibt sich somit zu:
+\begin{equation*}
+\varepsilon_{min}=\frac{C_W^*}{C_A^*}=0,0775
+\end{equation*}
+Mit Hilfe der Streckung $\Lambda$, welche sich mit dem Quotient aus Spannweite b zum Quadrat durch Flügelfläche S berechnen lässt kann der Oswald-Faktor des Flügels bestimmt werden. 
+\begin{equation*}
+e=\frac{1}{k\pi \Lambda}=\frac{1}{0,0228 \cdot \pi \cdot 8,338} = 1,674
+\end{equation*}
+\paragraph{DO 28} Für die Auswertung der Lilienthal-Polare wird analog zur DO 128-6 vorgegangen. Die Ergebnisse seien hier kurz Zusammengefasst:
+\begin{itemize}
+	\item $k=0,1443$ \hspace{5mm}  $b=0,1317$ \hspace{5mm}   $C_{W0}=0,1087$
+	\item $C_{A}^* \approx 0,89$ \hspace{5mm}   $C_{W}^* \approx 0,108$
+	\item $\varepsilon_{min}=0,1214$
+	\item $\Lambda=8,036$ 
+	\item $e=0,275$
+\end{itemize}
+\vspace{3mm}
 \subsection{Widerstand über die Fluggeschwindigkeit}
+In Abbildung \ref{abb:do128_wv} und \ref{abb:do28_wv} ist für die DO 128-6 bzw. DO 28 der Widerstand über der realen Fluggeschwindigkeit aufgetragen. Durch eine quadratisch Regression lässt sich bei beiden Verläufen eine nach unten geöffnete Parabel erkennen. Da der Widerstand negativ definiert ist, kann durch das berechnen des Maximums der Zustand minimaler aerodynamischer Verlustleistung bestimmt werden. Die dazugehörige Geschwindigkeit $V_{opt}$ sowie der minimale Widerstand $W_{min}$ sind ihn den jeweiligen Diagrammen eingezeichnet.\\
+\paragraph{DO 128-6}
+\begin{equation*}
+W(V)=-2,0257V^2+161,15V-6434,1
+\end{equation*}
+\begin{equation*}
+W'(V)=-4,0514V+161,15\overset{!}{=}0
+\end{equation*}
+\begin{equation*}
+V_{opt}=\frac{-161,15}{-4,0514}=39,78 \, \frac{m}{s}
+\end{equation*}
+\begin{equation*}
+W_{min}=W(V_{opt}) = -3227,54 \,N
+\end{equation*}
+\paragraph{DO 28} Analog zur DO 128-6
+\begin{equation*}
+V_{opt}=52,238 \, \frac{m}{s}
+\end{equation*}
+\begin{equation*}
+W_{min}=-4370,5\, N
+\end{equation*}
+\vspace{3mm}
 \subsection{Staudruck und Fluggeschwindigkeit über dem Anstellwinkel}
+Abbildung \ref{abb:do28_wq_alpha} zeigt die reale Fluggeschwindigkeit sowie den Staudruck als Funktion des Anstellwinkels. Beide Kurven sind quadratisch angenähert und beschreiben eine nach oben hin geöffnete Parabel. Mit steigendem Anstellwinkel fällt also der Staudruck und somit auch die Geschwindigkeit. Da $V_{TAS} = f(q,\varrho)$ gilt, ist ein ähnlicher Verlauf beider Kurven zu erwarten. 
 \newpage
 
 \section{Analyse durch Jens Karch}
@@ -227,8 +274,7 @@ V = 0,55\alpha^2 - 10,18\alpha +91,77
 q = 0,36\alpha^2 -6,67\alpha +41,15
 \end{equation}
 Durch den quadratischen Verlauf lässt sich erkennen, dass bei größeren Fluggeschwindigkeiten und Staudrücken nur kleine Anstellwinkel geflogen werden können. Je langsamer man fliegt, desto größere Anstellwinkel kann man fliegen. Dies entspricht der Theorie, da bei hohen Fluggeschwindigkeiten und großen Anstellwinkeln die Gefahr des Strömungsabrisses besteht.
-\newpage
-
+\vspace{5mm}
 \section{Analyse durch Kilian Schultz}
 \subsection{Höhenruder-Trimmkurve}
 Im Plot Anstellwinkel über Höhenruderausschlag lässt sich eine leicht nach oben gewölbte Kurve erkennen, welche eine Korrelation zwischen nach unten gerichtetem Höhenruder und positivem Anstellwinkel erkennen lässt. Bei neutral eingestelltem Höhenruder lässt sich ein Anstellwinkel von etwa 2,5 Grad in positiver Richtung ablesen.\\

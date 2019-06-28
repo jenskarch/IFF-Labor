@@ -1,16 +1,19 @@
 \chapter{Diskussion des Versuches}
 \label{chapter:fazit}
 \section{Diskussion von Marco}
+Ziel des Labor war es, den Umgang mit realen Messwerten zu erlernen, welche von uns selbst in einem Flugversuch erfasst wurden, sowie das Arbeiten in fremden Messreihen.\\ Da die meisten Werte der DO 28 Messreihe nur analog vorliegen, konnten diese immer nur ungefähr abgelesen werden. Außerdem wurden starke Linearisierungen vorgenommen, da sonst das Arbeiten mit den Daten unmöglich gewesen wäre. Bei unserem Versuchsflug war es nur möglich Werte zu Beginn und Ende zu erfassen, wodurch es zu Linearisierungen kommt und Ungenauigkeiten entstehen. Außerdem wurden  Annahmen und Vereinfachungen getroffen, welche die Ergebnisse weiter verfälschen.
 \subsection{Höhenruder-Trimmkurve}
-
-\subsection{Auftriebsbeiwert über den Anstellwinkel}
+Allgemein erwartet man einen linearen Zusammenhang zwischen Anstellwinkel und Höhenruderausschlag, da der Auftrieb des Höhenleitwerks, und das somit resultierende Nickmoment , ebenfalls linear von dem Ruderausschlag abhängen. \\ Betrachtet man nur die einzelnen Sinkflüge ist dies nicht immer gegeben. Insbesondere bei Sinkflug eins und drei gibt es Abschnitte in denen ein linearer Zusammenhang nicht zu erkennen ist. Dies kann allerdings gut durch Windeinflüsse erklärt werden, da der Pilot je nach Wetterlage viel Korrigieren muss um einen stabilen Sinkflug zu fliegen.
+\subsection{Auftriebsbeiwert über den Anstellwinkel} Vergleicht man die aufgelöste Polare des DO 28 Flügels mit einem NACA 2412 Profil stellt man fest, dass diese bis auf den abfallenden Ast fast übereinstimmen. Die errechnete Regression gibt somit einen realistischen Sachverhalt wider. Ob dies allerdings die Realität exakt abbildet ist fraglich, da sich Fehler in den Daten und der Berechnung befinden.
 \subsection{LILIENTHAL-Polare}
 Die Theorie besagt, dass $C_{W}^{*} = 2C_{W0}$ ist. Wendet man dies auf unsere Auswertung an Stellt man fest, dass dieser Zusammenhang dort nicht gilt. \\
-Im Hinblick auf den Oswald-Faktor gibt es große Abweichungen zur Theorie. Für die DO 128-6 wurde ein Oswald-Faktor von $e=1,674$ berechnet. Dieser kann laut Definition allerdings maximal 1 sein. Da $e=f(k, \Lambda)$ gilt, und die Streckung eine rein geometrische Größe ist der von uns errechnete Widerstandsanstieg k nicht korrekt. 
+Im Hinblick auf den Oswald-Faktor gibt es große Abweichungen zur Theorie. Für die DO 128-6 wurde ein Oswald-Faktor von $e=1,674$ berechnet. Dieser kann laut Definition allerdings maximal 1 sein. Da $e=f(k, \Lambda)$ gilt, und die Streckung eine rein geometrische Größe ist, kann der von uns errechnete Widerstandsanstieg k nicht korrekt sein. \\ Betrachtet man den Oswald-Faktor der DO 28 fällt auf, dass dieser mit $e=0,2745$ sehr klein ist. Üblich sind Werte zwischen 0,65 und 0,85. \\
+Da dieser doch massive Fehler bei beiden Flugzeugen auftritt ist ein Fehler bei der Berechnung von $C_W$ und $C_A$ oder der Regression nicht unwahrscheinlich.
 \subsection{Widerstand über die Fluggeschwindigkeit}
-Die Kurven der beiden Diagramme entsprechen qualitativ in etwa der Theorie. Im Vergleich zur DO 28 besitzt die DO 128-6 einen deutlich geringeren minimalen Widerstand und geringer optimale Geschwindigkeit, obwohl die DO128-6 deutlich schwerer ist als ihr Vorgänger. Um beide Flugzeuge allerdings wirklich miteinander Vergleichen zu können müsste man für gleiche Umgebungsbedingungen sorgen. Wettereinflüsse, sowie das Rechnen mit Vereinfachungen und Annahmen wie in Kap. \ref{chapter:theorie} beschrieben, können einen großen Einfluss auf die Ergebnisse haben.
+Die Kurven der beiden Diagramme entsprechen qualitativ in etwa der Theorie. Im Vergleich zur DO~28 besitzt die DO 128-6 einen deutlich geringeren minimalen Widerstand, eine geringere optimale Geschwindigkeit, sowie eine bessere minimale reziproke Gleitzahl, und das obwohl die \linebreak[4]DO128-6 deutlich schwerer ist als ihr Vorgänger. Um beide Flugzeuge allerdings wirklich miteinander Vergleichen zu können müsste man für gleiche Umgebungsbedingungen sorgen. Wettereinflüsse, sowie das Rechnen mit Vereinfachungen und Annahmen wie in Kap. \ref{chapter:theorie} beschrieben, können einen großen Einfluss auf die Ergebnisse haben.
 \subsection{Staudruck und Fluggeschwindigkeit über dem Anstellwinkel}
-\newpage
+Da die Geschwindigkeit laut Gl. \ref{eq:vüberq} von dem Staudruck abhängt ist die Ähnlichkeit beider Kurven zu erwarten. Auch das Abfallen der Geschwindigkeit mit steigendem Anstellwinkel ist zu erwarten, da unter konstanter Leistung der Turbinen zusätzliche Hubarbeit verrichtet werden muss. Die quadratische Regression macht allerdings nur in einem gewissen Bereich Sinn, da beide Kurven monoton fallen müssten. So steigen in Abb. \ref{abb:do28_wq_alpha} die Werte ab einem Anstellwinkel von ca. 9° wieder an. Wird ein kritischer Anstellwinkel überschritten führt die wie bereits erwähnt zu einem Strömungsabriss und damit auch zu einem Abfall der Fluggeschwindigkeit.
+\vspace{10mm}
 
 \section{Diskussion von Jens}
 In diesem Labor haben wir gelernt, wie wir mit einer großen Menge an Daten arbeiten und diese möglichst effizient darstellen können. Gerade das Erstellen von Diagrammen hat einige Schwierigkeiten bereitet, welche dazu führten, dass wir deutlich mehr Zeit brauchten als ursprünglich eingeplant. So sind gewisse Fehler erst sehr spät aufgefallen, sodass diverse Diagramme immer wieder neu erstellt und darauf hin auch die Interpretationen leicht angepasst werden mussten. Dadurch haben wir jedoch intensiv den Umgang mit Plot-Programmen, aber vor allen Dingen auch das be- und umrechnen von aerodynamischen Größen gelernt. Gerade letzteres hat noch einmal das theoretische Wissen aus vergangen Semestern gestützt und erweitert.\\
@@ -22,7 +25,7 @@ Bereits während des Versuches treten diverse Fehler auf, die auf ungenaue Messa
 Auch im Verlauf des Auswertens der Daten treten jedoch Fehler auf. Bei der Do 28 war es zum Beispiel sehr unpräzise die Daten aus den gedruckten Messschrieben abzulesen. Ein Zugriff auf die Rohdaten hätte diesen Fehler minimieren können. Auch beim Berechnen und Umrechnen pflanzen sich Fehler unter anderem durch Runden von Zwischenergebnissen, aber auch durch vereinfachte Berechnungsformeln fort (als Beispiel sei hier die vereinfachende Annahme einer isobaren Zustandsänderung bei der Berechnung von Atmosphärendaten erwähnt).\\\\
 All diese Fehler sorgen zum Schluss für ein ungenaues, vielleicht sogar unbrauchbares Ergebniss.
 
-\newpage
+\vspace{10mm}
 
 \section{Diskussion von Philip}
 Das Ziel dieses Labor war es die Durchführung eines Flugversuches mit anschließender Auswertung von Messdaten zu erlernen. Ein Versuch bedarf eine akribische Vorbereitung mit vorgefertigten Protokollen, damit man sich während des Versuchs auf das Wesentliche konzentrieren kann und so einen möglichst reibungslosen Verlauf ermöglichen kann. Man sollte im Vorfeld genaue Kenntnis darüber haben, wie man den Versuch durchführen will und was man dafür an Daten benötigt. \\\\
@@ -32,7 +35,7 @@ Die Auswertung der Daten brachte doch einige Probleme mit sich, wodurch eine ang
 \\\\
 Um die Fehler zu verkleinern, wäre es hilfreich, wenn die Messdaten der Do 28 zusätzlich zu den Diagrammen noch als Zahlenwerte geliefert würden. Sowie den Wetterdaten am Tag des Messfluges. Dadurch lässt sich zumindest grob ein Urteil darüber bilden, wie in etwa die Umgebungsbedingungen waren und was für ein Wind an diesem Tag geherrscht hat. 
 
-\newpage
+\vspace{10mm}
 
 \section{Diskussion von Kilian}
 \subsection{Höhenruder-Trimmkurve}
@@ -59,7 +62,7 @@ Die Verknüpfung der Stichproben von Sinkflügen drei und vier oder Sinkflügen 
 
 \subsection{Staudruck und Fluggeschwindigkeit über dem Anstellwinkel}
 Der Staudruck und die wahre Fluggeschwindigkeit sind formelhaft miteinander verknüpft (siehe Kapitel Theoretische Grundlagen). Konsistente Daten würden diesen Zusammenhang wiedergeben, indem Sie den Staudruck als betragsmäßig vielfaches der wahren Fluggeschwindigkeit zeigen. Dies ist für die Stichproben der Do-28 gegeben.
-\newpage
+\vspace{10mm}
 
 \section{Diskussion von Wentao}
  Es gibt manche Messfehler und ist auch von äußeren Faktoren ab und zu beeinflußt, trotzdem ist der Versuch zusammenfassend gut geeignet um die Theorie und ähnelt sich auch den vorherigen Versuch vom $Do - 28$. Mit zahlreichen Daten von Messreihen verringert die Messfehler sich möglichst, aber im eigenen Versuch ist das Wertebereich nicht groß genügend für Messfehler zu verringern, obwohl die Plots vom Eigenversuch tatsächlich noch in Ordnung sind. Die Wetter, genaue Kenntnisse an der Aerodynamik des $Do -128$ und noch anderen äußere Faktoren, die wahrscheinlich die Messfehler verursacht, werden aber im Versuch vernachlässigt. Ein möglicher Lösung für die Messfehler zu vermeiden ist der Windkanal, um den Umgebungsbeeinfluss zu kontrollieren, oder mit einem Segelflugzeug, der relativ einfachere Aerodynamik besitzt.
